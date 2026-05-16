@@ -1,0 +1,2926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Marketing Cloud — Executive Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B2B8A;
+    --navy-dark: #071C5E;
+    --navy-light: #1A45C4;
+    --teal: #0ABCD4;
+    --teal-light: #E0F7FC;
+    --yellow: #F5C518;
+    --yellow-light: #FFF9E0;
+    --blue-cta: #1A56DB;
+    --bg: #F4F7FD;
+    --surface: #FFFFFF;
+    --border: #DDE3F0;
+    --text-primary: #0B1F5A;
+    --text-secondary: #4A5580;
+    --text-muted: #8B94B8;
+    --tab-active: #0B2B8A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 32px;
+  }
+  .bar { border-radius: 2px 2px 0 0; }
+  .bar-1 { width: 10px; height: 20px; background: var(--yellow); }
+  .bar-2 { width: 10px; height: 28px; background: var(--teal); }
+  .bar-3 { width: 10px; height: 32px; background: var(--navy); }
+
+  .nav-logo-text {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.2px;
+  }
+
+  .nav-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .nav-badge {
+    background: var(--navy);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .nav-date {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ── HERO / INTRO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1535A8 100%);
+    padding: 80px 48px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(10, 188, 212, 0.12);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40%;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(245, 197, 24, 0.08);
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow-line {
+    width: 40px; height: 2px;
+    background: var(--teal);
+  }
+
+  .eyebrow-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--yellow);
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    max-width: 680px;
+    margin-bottom: 40px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+  }
+
+  .stat-item {
+    border-left: 2px solid var(--teal);
+    padding-left: 16px;
+  }
+
+  .stat-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── TABLE OF CONTENTS ── */
+  .toc-section {
+    padding: 56px 48px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+
+  .toc-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .toc-card:hover {
+    border-color: var(--navy);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(11,43,138,0.1);
+  }
+
+  .toc-card.active {
+    border-color: var(--navy);
+    background: var(--navy);
+  }
+
+  .toc-card-accent {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .toc-num {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .toc-card.active .toc-num { color: rgba(255,255,255,0.55); }
+
+  .toc-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+
+  .toc-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.35;
+  }
+  .toc-card.active .toc-title { color: #fff; }
+
+  .toc-arrow {
+    margin-top: 16px;
+    font-size: 18px;
+    color: var(--text-muted);
+    display: block;
+  }
+  .toc-card.active .toc-arrow { color: rgba(255,255,255,0.6); }
+
+  /* Accent colors per tab */
+  .tab-1 .toc-card-accent { background: var(--teal); }
+  .tab-2 .toc-card-accent { background: var(--yellow); }
+  .tab-3 .toc-card-accent { background: #7B5CF6; }
+  .tab-4 .toc-card-accent { background: #22C55E; }
+  .tab-5 .toc-card-accent { background: #F97316; }
+
+  .tab-1 .toc-icon { background: var(--teal-light); color: var(--teal); }
+  .tab-2 .toc-icon { background: var(--yellow-light); color: #B8860B; }
+  .tab-3 .toc-icon { background: #F3F0FF; color: #7B5CF6; }
+  .tab-4 .toc-icon { background: #F0FDF4; color: #16A34A; }
+  .tab-5 .toc-icon { background: #FFF7ED; color: #EA580C; }
+
+  /* ── MAIN CONTENT ── */
+  .main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 48px 80px;
+  }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── TAB HEADER ── */
+  .tab-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tab-title-block {}
+
+  .tab-accent-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .tab-h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .tab-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    max-width: 560px;
+    line-height: 1.6;
+  }
+
+  .tab-nav-btns {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: 24px;
+  }
+
+  .btn-nav {
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-nav:hover { border-color: var(--navy); color: var(--navy); }
+  .btn-nav.primary {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+  }
+  .btn-nav.primary:hover { background: var(--navy-dark); }
+
+  /* ── PLACEHOLDER CONTENT ── */
+  .placeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .placeholder-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .content-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .content-card-wide {
+    grid-column: 1 / -1;
+  }
+
+  .card-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .placeholder-chart {
+    background: var(--bg);
+    border-radius: 8px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px dashed var(--border);
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  .placeholder-chart-tall {
+    height: 200px;
+  }
+
+  .placeholder-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .placeholder-table th {
+    background: var(--bg);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 1.5px solid var(--border);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .placeholder-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+  .placeholder-table tr:last-child td { border-bottom: none; }
+  .placeholder-table tr:hover td { background: var(--bg); }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .tag-blue { background: #E0ECFF; color: #1A45C4; }
+  .tag-green { background: #DCFCE7; color: #16A34A; }
+  .tag-amber { background: #FEF9C3; color: #A16207; }
+  .tag-red { background: #FEE2E2; color: #B91C1C; }
+
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .metric-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+
+  .metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .metric-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .metric-delta {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .delta-up { color: #16A34A; }
+  .delta-tbd { color: var(--text-muted); }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -24px; top: 4px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 2px solid var(--surface);
+    box-shadow: 0 0 0 2px var(--navy);
+  }
+  .timeline-quarter {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .timeline-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .timeline-body {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ── AGENCY GRID ── */
+  .agency-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .agency-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .agency-initials {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 auto 10px;
+  }
+  .agency-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .agency-focus {
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  /* ── ASSET CARDS ── */
+  .asset-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .asset-row:last-child { border-bottom: none; }
+  .asset-icon {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .asset-info { flex: 1; }
+  .asset-name { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+  .asset-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .asset-status {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 12px;
+  }
+
+  /* ── FIELD ACTIVATION ── */
+  .activation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .activation-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+  }
+  .activation-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .activation-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+  }
+  .activation-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .activation-list li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+  }
+  .activation-list li::before {
+    content: '—';
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy-dark);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo { color: rgba(255,255,255,0.6); font-size: 13px; }
+  .footer-conf { 
+    font-size: 11px; 
+    color: rgba(255,255,255,0.35); 
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-bars">
+      <div class="bar bar-1"></div>
+      <div class="bar bar-2"></div>
+      <div class="bar bar-3"></div>
+    </div>
+    <span class="nav-logo-text">The Marketing Cloud</span>
+  </a>
+  <div class="nav-meta">
+    <span class="nav-badge">Product Launch &amp; Scaling with Partner</span>
+    
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-label">Executive Presentation</span>
+    </div>
+    <h1>Empowering the<br><em>Modern Marketer</em></h1>
+    <p class="hero-desc">
+      The Marketing Cloud is a suite of data-driven SaaS solutions built for the modern marketer — pairing power and precision to streamline martech strategy and deliver measurable outcomes at every stage of the customer journey.
+    </p>
+
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc-section">
+  <div class="section-label">Contents</div>
+  <div class="toc-grid">
+
+    <div class="toc-card tab-1 active" onclick="switchTab(1)">
+      <div class="toc-card-accent"></div>
+      <div class="toc-num">01</div>
+      <div class="toc-icon">📊</div>
+      <div class="toc-title">Market Research &amp; TAM Analysis</div>
+      <span class="toc-arrow">→</span>
+    </div>
+
+    <div class="toc-card tab-2" onclick="switchTab(2)">
+      <div class="toc-card-accent"></div>
+      <div class="toc-num">02</div>
+      <div class="toc-icon">📅</div>
+      <div class="toc-title">Business Plan Over Time</div>
+      <span class="toc-arrow">→</span>
+    </div>
+
+    <div class="toc-card tab-3" onclick="switchTab(3)">
+      <div class="toc-card-accent"></div>
+      <div class="toc-num">03</div>
+      <div class="toc-icon">🏛️</div>
+      <div class="toc-title">Stagwell Activation Across Agencies</div>
+      <span class="toc-arrow">→</span>
+    </div>
+
+    <div class="toc-card tab-4" onclick="switchTab(4)">
+      <div class="toc-card-accent"></div>
+      <div class="toc-num">04</div>
+      <div class="toc-icon">💼</div>
+      <div class="toc-title">Go-To-Market Assets &amp; IP</div>
+      <span class="toc-arrow">→</span>
+    </div>
+
+    <div class="toc-card tab-5" onclick="switchTab(5)">
+      <div class="toc-card-accent"></div>
+      <div class="toc-num">05</div>
+      <div class="toc-icon">🚀</div>
+      <div class="toc-title">Palantir Partner Activation</div>
+      <span class="toc-arrow">→</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+  <!-- TAB 1: MARKET RESEARCH & TAM -->
+  <div class="tab-panel active" id="tab-1">
+    <div class="tab-header">
+      <div class="tab-title-block">
+        <div class="tab-accent-pill" style="background:#E0F7FC; color:#0077A3;">
+          <span>01</span> · Market Research
+        </div>
+        <h2 class="tab-h2">Total Addressable Market &<br>Vendor Analysis</h2>
+        <p class="tab-subtitle">Mapping the martech landscape, sizing revenue opportunity, and evaluating competitive vendor positioning across core solution categories.</p>
+      </div>
+      <div class="tab-nav-btns">
+        <button class="btn-nav" onclick="switchTab(2)">Next: Business Plan →</button>
+      </div>
+    </div>
+
+    <!-- SOURCE BANNER -->
+    <div style="background:#E0F7FC; border:1px solid #B2EBF2; border-radius:8px; padding:10px 16px; margin-bottom:24px; display:flex; align-items:center; gap:10px;">
+      <span style="font-size:14px;">📄</span>
+      <span style="font-size:12px; color:#0077A3; font-weight:500;">Source: Marketing Tech Landscape — Executive Readout &nbsp;·&nbsp; Signal analysis across 1,657 tracked projects</span>
+    </div>
+
+    <!-- METRIC ROW -->
+    <div class="metric-row">
+      <div class="metric-card">
+        <div class="metric-value">1,657</div>
+        <div class="metric-label">Signal Projects Tracked</div>
+        <div class="metric-delta delta-up">Full martech landscape scan</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">54%</div>
+        <div class="metric-label">Marketing or CDP Signal</div>
+        <div class="metric-delta delta-up">894 of 1,657 projects</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">8</div>
+        <div class="metric-label">Vendors Analyzed</div>
+        <div class="metric-delta delta-tbd">Salesforce · Microsoft · Adobe +5</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">12</div>
+        <div class="metric-label">Industries Mapped</div>
+        <div class="metric-delta delta-tbd">Retail leads at 109 projects</div>
+      </div>
+    </div>
+
+    <!-- MARKET INTERPRETATION CALLOUT -->
+    <div style="background:var(--navy); border-radius:12px; padding:28px 32px; margin-bottom:20px; position:relative; overflow:hidden;">
+      <div style="position:absolute; right:-20px; top:-20px; width:180px; height:180px; border-radius:50%; background:rgba(10,188,212,0.1);"></div>
+      <div style="font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:var(--teal); margin-bottom:10px;">Strategic Interpretation</div>
+      <div style="font-family:'DM Serif Display',serif; font-size:22px; color:#fff; line-height:1.3; margin-bottom:14px; max-width:780px;">The market is moving in two connected lanes — mature campaign execution and strategic CDP/data unification — and the winning opportunity sits at their intersection.</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:860px;">
+        <div style="background:rgba(255,255,255,0.07); border-radius:8px; padding:16px;">
+          <div style="font-size:12px; font-weight:600; color:var(--teal); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Lane 1 · Mature &amp; Execution-Heavy</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.75); line-height:1.6;">Marketing Cloud, campaign operations, journeys, and B2B marketing automation. Well-established demand with Salesforce as the dominant incumbent.</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.07); border-radius:8px; padding:16px;">
+          <div style="font-size:12px; font-weight:600; color:var(--yellow); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">Lane 2 · Strategic &amp; Foundational</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.75); line-height:1.6;">CDP, Data Cloud, unified profiles, data integration, and customer data activation. Clients want data unified to power journeys, personalization, loyalty, and analytics.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- USE CASE & INDUSTRY ROW -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+
+      <!-- USE CASE BREAKDOWN -->
+      <div class="content-card">
+        <div class="card-label">Use Case Analysis</div>
+        <div class="card-title">Most Common Themes · Marketing/CDP Cohort</div>
+        <div class="card-desc" style="margin-bottom:16px;">Multi-label — one project can appear in multiple categories. Base: 894 projects.</div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">Marketing automation &amp; journey execution</span>
+              <span style="color:var(--navy); font-weight:600;">68.9%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:var(--teal); height:100%; width:68.9%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">CDP / unified customer profile &amp; identity</span>
+              <span style="color:var(--navy); font-weight:600;">38.4%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:var(--navy); height:100%; width:38.4%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">Strategy, discovery &amp; vendor selection</span>
+              <span style="color:var(--navy); font-weight:600;">37.9%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:var(--navy); height:100%; width:37.9%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">Data platform, integration &amp; analytics</span>
+              <span style="color:var(--navy); font-weight:600;">28.9%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:#7B5CF6; height:100%; width:28.9%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">CRM, sales/service &amp; front-office integration</span>
+              <span style="color:var(--navy); font-weight:600;">24.7%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:#7B5CF6; height:100%; width:24.7%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">Personalization, segmentation &amp; activation</span>
+              <span style="color:var(--navy); font-weight:600;">21.9%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:#22C55E; height:100%; width:21.9%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">Measurement, attribution, clean rooms &amp; ad-tech</span>
+              <span style="color:var(--navy); font-weight:600;">14.0%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:#F97316; height:100%; width:14%; border-radius:4px;"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;">
+              <span style="color:var(--text-primary); font-weight:500;">AI, agents &amp; marketing operations automation</span>
+              <span style="color:var(--navy); font-weight:600;">6.6%</span>
+            </div>
+            <div style="background:var(--bg); border-radius:4px; height:6px; overflow:hidden;">
+              <div style="background:#F97316; height:100%; width:6.6%; border-radius:4px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDUSTRY BREAKDOWN -->
+      <div class="content-card">
+        <div class="card-label">Industry Breakdown</div>
+        <div class="card-title">Top Industries by Marketing/CDP Project Volume</div>
+        <div class="card-desc" style="margin-bottom:14px;">Retail leads in volume; CPG is most distinctive for clean-room &amp; measurement use cases.</div>
+        <table class="placeholder-table">
+          <thead>
+            <tr>
+              <th>Industry</th>
+              <th style="text-align:right;">Total</th>
+              <th style="text-align:right;">Mktg</th>
+              <th style="text-align:right;">CDP</th>
+              <th>Key Signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:500;">Retail</td>
+              <td style="text-align:right;">109</td>
+              <td style="text-align:right;">91</td>
+              <td style="text-align:right;">28</td>
+              <td><span class="tag tag-blue">Automation · CDP</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Healthcare</td>
+              <td style="text-align:right;">73</td>
+              <td style="text-align:right;">68</td>
+              <td style="text-align:right;">13</td>
+              <td><span class="tag tag-green">Patient Engagement</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Banking</td>
+              <td style="text-align:right;">68</td>
+              <td style="text-align:right;">59</td>
+              <td style="text-align:right;">11</td>
+              <td><span class="tag tag-blue">Journey · CDP</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Pharma / Biotech</td>
+              <td style="text-align:right;">62</td>
+              <td style="text-align:right;">58</td>
+              <td style="text-align:right;">7</td>
+              <td><span class="tag tag-amber">Automation · Data Cloud</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Software</td>
+              <td style="text-align:right;">54</td>
+              <td style="text-align:right;">50</td>
+              <td style="text-align:right;">6</td>
+              <td><span class="tag tag-blue">B2B · Pardot</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Professional Services</td>
+              <td style="text-align:right;">34</td>
+              <td style="text-align:right;">30</td>
+              <td style="text-align:right;">7</td>
+              <td><span class="tag tag-amber">CDP Strategy</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Media &amp; Entertainment</td>
+              <td style="text-align:right;">31</td>
+              <td style="text-align:right;">26</td>
+              <td style="text-align:right;">6</td>
+              <td><span class="tag tag-blue">Personalization · CDP</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:500;">Consumer Packaged Goods</td>
+              <td style="text-align:right;">28</td>
+              <td style="text-align:right;">23</td>
+              <td style="text-align:right;">6</td>
+              <td><span class="tag tag-amber">Clean Rooms · AMC</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- VENDOR ANALYSIS + TOP PRODUCTS -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+
+      <!-- VENDOR SUMMARY -->
+      <div class="content-card">
+        <div class="card-label">Vendor Summary</div>
+        <div class="card-title">Competitive Vendor Presence</div>
+        <div class="card-desc" style="margin-bottom:14px;">Salesforce is the dominant incumbent. Microsoft leads in explicit CDP via D365 Customer Insights. Adobe holds the strongest RTCDP signal.</div>
+        <table class="placeholder-table">
+          <thead>
+            <tr>
+              <th>Vendor</th>
+              <th style="text-align:right;">All Projects</th>
+              <th style="text-align:right;">Mktg/CDP</th>
+              <th style="text-align:right;">CDP</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Salesforce</td>
+              <td style="text-align:right;">886</td>
+              <td style="text-align:right;">664</td>
+              <td style="text-align:right;">33</td>
+              <td><span class="tag tag-red">Dominant</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Microsoft</td>
+              <td style="text-align:right;">552</td>
+              <td style="text-align:right;">48</td>
+              <td style="text-align:right;">35</td>
+              <td><span class="tag tag-blue">CDP Leader</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Databricks</td>
+              <td style="text-align:right;">162</td>
+              <td style="text-align:right;">22</td>
+              <td style="text-align:right;">7</td>
+              <td><span class="tag tag-amber">Data Platform</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">AWS</td>
+              <td style="text-align:right;">79</td>
+              <td style="text-align:right;">45</td>
+              <td style="text-align:right;">6</td>
+              <td><span class="tag tag-amber">Clean Rooms</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Adobe</td>
+              <td style="text-align:right;">50</td>
+              <td style="text-align:right;">39</td>
+              <td style="text-align:right;">14</td>
+              <td><span class="tag tag-blue">RTCDP · CJA</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Amazon (AMC)</td>
+              <td style="text-align:right;">61</td>
+              <td style="text-align:right;">61</td>
+              <td style="text-align:right;">0</td>
+              <td><span class="tag tag-amber">Ad Measurement</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Snowflake</td>
+              <td style="text-align:right;">59</td>
+              <td style="text-align:right;">14</td>
+              <td style="text-align:right;">8</td>
+              <td><span class="tag tag-blue">Data Foundation</span></td>
+            </tr>
+            <tr>
+              <td style="font-weight:600; color:var(--navy);">Amperity / ActionIQ</td>
+              <td style="text-align:right;">8</td>
+              <td style="text-align:right;">8</td>
+              <td style="text-align:right;">8</td>
+              <td><span class="tag tag-green">Pure CDP</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TOP PRODUCTS -->
+      <div class="content-card">
+        <div class="card-label">Solution Analysis</div>
+        <div class="card-title">Leading Products in Marketing/CDP Cohort</div>
+        <div class="card-desc" style="margin-bottom:14px;">Marketing Cloud Engagement is the clear execution leader. Data Cloud is the strongest CDP-like product signal.</div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">MC · Engagement</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:var(--teal); height:100%; width:100%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">390</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">Data Cloud (SFDC)</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:var(--teal); height:100%; width:43%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">169</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">MC · Account Engagement</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:var(--navy); height:100%; width:25%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">98</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">Sales Cloud</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:var(--navy); height:100%; width:20%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">80</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">Amazon Marketing Cloud</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:#F97316; height:100%; width:17%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">65</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">MC · Personalization</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:#7B5CF6; height:100%; width:13%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">49</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">D365 Customer Insights</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:#7B5CF6; height:100%; width:6%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">23</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="font-size:12px; color:var(--text-secondary); width:190px; flex-shrink:0;">Adobe RTCDP</div>
+            <div style="flex:1; background:var(--bg); border-radius:4px; height:8px; overflow:hidden;">
+              <div style="background:#22C55E; height:100%; width:5%; border-radius:4px;"></div>
+            </div>
+            <div style="font-size:12px; font-weight:600; color:var(--navy); width:36px; text-align:right;">18</div>
+          </div>
+          <div style="border-top:1px solid var(--border); margin-top:4px; padding-top:10px; font-size:12px; color:var(--text-muted);">
+            Teal = Salesforce &nbsp;·&nbsp; Navy = Cross-platform &nbsp;·&nbsp; Orange = Amazon &nbsp;·&nbsp; Purple = Microsoft &nbsp;·&nbsp; Green = Adobe
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNAL SUMMARY PILLS -->
+    <div class="content-card" style="margin-bottom:0;">
+      <div class="card-label">Key Signals</div>
+      <div class="card-title" style="margin-bottom:14px;">Market Signal Summary</div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px;">
+        <div style="background:var(--bg); border-radius:8px; padding:14px;">
+          <div style="font-size:22px; font-weight:700; color:var(--navy); margin-bottom:4px;">47.5%</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">of all projects mention <strong>Marketing</strong> (787 projects)</div>
+        </div>
+        <div style="background:var(--bg); border-radius:8px; padding:14px;">
+          <div style="font-size:22px; font-weight:700; color:var(--navy); margin-bottom:4px;">31.5%</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">carry a broader <strong>CDP/Data Cloud</strong> signal (522 projects)</div>
+        </div>
+        <div style="background:var(--bg); border-radius:8px; padding:14px;">
+          <div style="font-size:22px; font-weight:700; color:var(--navy); margin-bottom:4px;">9.9%</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">mention <strong>CDP explicitly</strong> — 164 projects in early stages</div>
+        </div>
+        <div style="background:var(--bg); border-radius:8px; padding:14px;">
+          <div style="font-size:22px; font-weight:700; color:var(--teal); margin-bottom:4px;">CDP + Activation</div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">The <strong>strongest opportunity</strong>: unified data powering journeys, personalization &amp; loyalty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB 2: BUSINESS PLAN OVER TIME -->
+  <div class="tab-panel" id="tab-2">
+    <div class="tab-header">
+      <div class="tab-title-block">
+        <div class="tab-accent-pill" style="background:#FFF9E0; color:#A16207;">
+          <span>02</span> · Business Plan
+        </div>
+        <h2 class="tab-h2">Business Plan<br>Over Time</h2>
+        <p class="tab-subtitle">Phased investment roadmap, revenue milestones, and operating model evolution from launch through scale.</p>
+      </div>
+      <div class="tab-nav-btns">
+        <button class="btn-nav" onclick="switchTab(1)">← Market Research</button>
+        <button class="btn-nav primary" onclick="switchTab(3)">Stagwell Activation →</button>
+      </div>
+    </div>
+
+
+    <style>
+      .calc-section { margin-bottom: 28px; }
+      .calc-header {
+        display: flex; align-items: center; gap: 10px;
+        margin-bottom: 14px;
+      }
+      .calc-num {
+        width: 26px; height: 26px; border-radius: 50%;
+        background: var(--navy); color: #fff;
+        font-size: 12px; font-weight: 700;
+        display: flex; align-items: center; justify-content: center;
+        flex-shrink: 0;
+      }
+      .calc-title-text { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+      .calc-desc-text { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+      .calc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      .calc-table th {
+        background: var(--navy); color: #fff;
+        padding: 9px 12px; text-align: center;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .calc-table th:first-child { text-align: left; border-radius: 8px 0 0 0; }
+      .calc-table th:last-child { border-radius: 0 8px 0 0; }
+      .calc-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+      .calc-table tr:last-child td { border-bottom: none; }
+      .calc-table .tier-label { font-weight: 600; color: var(--text-primary); font-size: 13px; }
+      .calc-table input[type=number] {
+        width: 100%; border: 1.5px solid var(--border); border-radius: 6px;
+        padding: 6px 8px; font-size: 13px; color: var(--text-primary);
+        background: var(--surface); text-align: right;
+        font-family: 'DM Sans', sans-serif;
+        transition: border-color 0.15s;
+        -moz-appearance: textfield;
+      }
+      .calc-table input[type=number]::-webkit-inner-spin-button,
+      .calc-table input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+      .calc-table input[type=number]:focus { outline: none; border-color: var(--teal); }
+      .calc-table .out-cell {
+        background: var(--bg); font-weight: 700;
+        color: var(--navy); text-align: right;
+        font-size: 13px; border-radius: 4px; padding: 6px 10px;
+        white-space: nowrap;
+      }
+      .calc-table .out-cell.green { color: #15803D; }
+      .calc-table .totals-row td {
+        background: #EEF2FF; font-weight: 700;
+        color: var(--navy); border-top: 2px solid var(--navy);
+        border-bottom: none;
+      }
+      .calc-summary-bar {
+        display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 14px;
+      }
+      .calc-summary-card {
+        background: var(--navy); border-radius: 10px; padding: 14px 16px; text-align: center;
+      }
+      .calc-summary-val { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+      .calc-summary-lbl { font-size: 11px; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.5px; }
+      .calc-summary-card.accent { background: var(--teal); }
+      .calc-summary-card.accent .calc-summary-val { color: var(--navy); }
+      .calc-summary-card.accent .calc-summary-lbl { color: rgba(11,43,138,0.65); }
+
+      .margin-slider-row {
+        display: flex; align-items: center; gap: 14px; margin-bottom: 14px;
+        background: var(--bg); border-radius: 8px; padding: 12px 16px;
+      }
+      .margin-slider-row label { font-size: 13px; font-weight: 600; color: var(--text-primary); white-space: nowrap; }
+      .margin-slider-row input[type=range] { flex: 1; }
+      .margin-val {
+        font-size: 20px; font-weight: 700; color: var(--navy);
+        min-width: 52px; text-align: right;
+      }
+    </style>
+
+    <!-- ── CALC 1: REVENUE & MARGIN ── -->
+    <div class="calc-section content-card">
+      <div class="calc-header">
+        <div class="calc-num">1</div>
+        <div>
+          <div class="calc-title-text">Revenue &amp; Margin Calculator</div>
+          <div class="calc-desc-text">Model deal volume by tier and quarter — adjust margin to see blended P&amp;L impact</div>
+        </div>
+      </div>
+
+      <div class="margin-slider-row" style="display:none;"><!-- slider removed --></div>
+
+      <div style="overflow-x:auto;">
+        <table class="calc-table" id="revTable">
+          <thead>
+            <tr>
+              <th>Deal Tier</th>
+              <th>Avg SOW ($)</th>
+              <th>Margin %</th>
+              <th>Q1 Deals</th>
+              <th>Q2 Deals</th>
+              <th>Q3 Deals</th>
+              <th>Q4 Deals</th>
+              <th>Total Deals</th>
+              <th>Total Revenue</th>
+              <th>Margin $</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-tier="large">
+              <td class="tier-label" style="color:#0077A3;">🔵 Large</td>
+              <td><input type="number" id="l_sow" value="10000000" oninput="calcRevenue()"></td>
+              <td><input type="number" id="l_mgn_pct" value="50" min="0" max="100" oninput="calcRevenue()" style="width:70px;"></td>
+              <td><input type="number" id="l_q1" value="5" oninput="calcRevenue()"></td>
+              <td><input type="number" id="l_q2" value="5" oninput="calcRevenue()"></td>
+              <td><input type="number" id="l_q3" value="5" oninput="calcRevenue()"></td>
+              <td><input type="number" id="l_q4" value="5" oninput="calcRevenue()"></td>
+              <td><div class="out-cell" id="l_deals">20</div></td>
+              <td><div class="out-cell" id="l_rev">$200,000,000</div></td>
+              <td><div class="out-cell green" id="l_margin">$100,000,000</div></td>
+            </tr>
+            <tr data-tier="medium">
+              <td class="tier-label" style="color:#B8860B;">🟡 Medium</td>
+              <td><input type="number" id="m_sow" value="5000000" oninput="calcRevenue()"></td>
+              <td><input type="number" id="m_mgn_pct" value="50" min="0" max="100" oninput="calcRevenue()" style="width:70px;"></td>
+              <td><input type="number" id="m_q1" value="10" oninput="calcRevenue()"></td>
+              <td><input type="number" id="m_q2" value="10" oninput="calcRevenue()"></td>
+              <td><input type="number" id="m_q3" value="10" oninput="calcRevenue()"></td>
+              <td><input type="number" id="m_q4" value="10" oninput="calcRevenue()"></td>
+              <td><div class="out-cell" id="m_deals">40</div></td>
+              <td><div class="out-cell" id="m_rev">$200,000,000</div></td>
+              <td><div class="out-cell green" id="m_margin">$100,000,000</div></td>
+            </tr>
+            <tr data-tier="small">
+              <td class="tier-label" style="color:#7B5CF6;">🟣 Small</td>
+              <td><input type="number" id="s_sow" value="1000000" oninput="calcRevenue()"></td>
+              <td><input type="number" id="s_mgn_pct" value="50" min="0" max="100" oninput="calcRevenue()" style="width:70px;"></td>
+              <td><input type="number" id="s_q1" value="15" oninput="calcRevenue()"></td>
+              <td><input type="number" id="s_q2" value="15" oninput="calcRevenue()"></td>
+              <td><input type="number" id="s_q3" value="15" oninput="calcRevenue()"></td>
+              <td><input type="number" id="s_q4" value="15" oninput="calcRevenue()"></td>
+              <td><div class="out-cell" id="s_deals">60</div></td>
+              <td><div class="out-cell" id="s_rev">$60,000,000</div></td>
+              <td><div class="out-cell green" id="s_margin">$30,000,000</div></td>
+            </tr>
+            <tr class="totals-row">
+              <td colspan="7" style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Totals</td>
+              <td><div class="out-cell" id="t_deals" style="background:transparent;">120</div></td>
+              <td><div class="out-cell" id="t_rev" style="background:transparent;">$460,000,000</div></td>
+              <td><div class="out-cell green" id="t_margin" style="background:transparent;">$230,000,000</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calc-summary-bar">
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="sum_deals">120</div>
+          <div class="calc-summary-lbl">Total Deals</div>
+        </div>
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="sum_rev">$460M</div>
+          <div class="calc-summary-lbl">Total Revenue</div>
+        </div>
+        <div class="calc-summary-card accent">
+          <div class="calc-summary-val" id="sum_margin">$230M</div>
+          <div class="calc-summary-lbl">Blended Margin</div>
+        </div>
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="sum_avg_deal">$3.8M</div>
+          <div class="calc-summary-lbl">Avg Deal Value</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CALC 2: TOP OF FUNNEL / WIN RATE ── -->
+    <div class="calc-section content-card">
+      <div class="calc-header">
+        <div class="calc-num">2</div>
+        <div>
+          <div class="calc-title-text">Top-of-Funnel &amp; Win Rate Calculator</div>
+          <div class="calc-desc-text">Set your win rate and deal targets — see how much pipeline you need to generate each month</div>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="calc-table">
+          <thead>
+            <tr>
+              <th>Deal Tier</th>
+              <th>Win Rate %</th>
+              <th>Target Wins / Qtr</th>
+              <th>Opps Needed / Qtr</th>
+              <th>Opps Needed / Month</th>
+              <th>Annual Wins</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-label" style="color:#0077A3;">🔵 Large</td>
+              <td><input type="number" id="fw_l_rate" value="25" min="1" max="100" oninput="calcFunnel()"></td>
+              <td><input type="number" id="fw_l_wins" value="5" min="0" oninput="calcFunnel()"></td>
+              <td><div class="out-cell" id="fw_l_opps_q">20</div></td>
+              <td><div class="out-cell" id="fw_l_opps_m">6.7</div></td>
+              <td><div class="out-cell" id="fw_l_ann">20</div></td>
+            </tr>
+            <tr>
+              <td class="tier-label" style="color:#B8860B;">🟡 Medium</td>
+              <td><input type="number" id="fw_m_rate" value="25" min="1" max="100" oninput="calcFunnel()"></td>
+              <td><input type="number" id="fw_m_wins" value="10" min="0" oninput="calcFunnel()"></td>
+              <td><div class="out-cell" id="fw_m_opps_q">40</div></td>
+              <td><div class="out-cell" id="fw_m_opps_m">13.3</div></td>
+              <td><div class="out-cell" id="fw_m_ann">40</div></td>
+            </tr>
+            <tr>
+              <td class="tier-label" style="color:#7B5CF6;">🟣 Small</td>
+              <td><input type="number" id="fw_s_rate" value="60" min="1" max="100" oninput="calcFunnel()"></td>
+              <td><input type="number" id="fw_s_wins" value="15" min="0" oninput="calcFunnel()"></td>
+              <td><div class="out-cell" id="fw_s_opps_q">25</div></td>
+              <td><div class="out-cell" id="fw_s_opps_m">8.3</div></td>
+              <td><div class="out-cell" id="fw_s_ann">60</div></td>
+            </tr>
+            <tr class="totals-row">
+              <td colspan="2" style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Totals</td>
+              <td><div class="out-cell" id="fw_t_wins" style="background:transparent;">30</div></td>
+              <td><div class="out-cell" id="fw_t_opps_q" style="background:transparent;">85</div></td>
+              <td><div class="out-cell" id="fw_t_opps_m" style="background:transparent;">28.3</div></td>
+              <td><div class="out-cell" id="fw_t_ann" style="background:transparent;">120</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calc-summary-bar" style="grid-template-columns:repeat(3,1fr); margin-top:14px;">
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="fw_sum_opps_m">28.3</div>
+          <div class="calc-summary-lbl">Total Opps / Month Needed</div>
+        </div>
+        <div class="calc-summary-card accent">
+          <div class="calc-summary-val" id="fw_sum_ann">120</div>
+          <div class="calc-summary-lbl">Annual Wins Target</div>
+        </div>
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="fw_sum_wr">37%</div>
+          <div class="calc-summary-lbl">Blended Win Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CALC 3: CONSULTANT TRAINING COST ── -->
+    <div class="calc-section content-card">
+      <div class="calc-header">
+        <div class="calc-num">3</div>
+        <div>
+          <div class="calc-title-text">Consultant Training Cost Calculator</div>
+          <div class="calc-desc-text">Model training investment, lost billing hours, and opportunity cost to size the practice launch cost</div>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="calc-table">
+          <thead>
+            <tr>
+              <th>Certification Track</th>
+              <th># Consultants</th>
+              <th>Training Price / Head ($)</th>
+              <th>Training Cost</th>
+              <th>Lost Hrs / Consultant</th>
+              <th>Hourly Rate ($)</th>
+              <th>Opp Cost</th>
+              <th>Total Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tier-label">Non-Technical / Admin Cert</td>
+              <td><input type="number" id="c_nt_heads" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><input type="number" id="c_nt_price" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><div class="out-cell" id="c_nt_train">$0</div></td>
+              <td><input type="number" id="c_nt_hrs" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><input type="number" id="c_nt_rate" value="188" min="0" oninput="calcConsultant()"></td>
+              <td><div class="out-cell" id="c_nt_opp">$0</div></td>
+              <td><div class="out-cell green" id="c_nt_total">$0</div></td>
+            </tr>
+            <tr>
+              <td class="tier-label">Technical / Dev Cert</td>
+              <td><input type="number" id="c_td_heads" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><input type="number" id="c_td_price" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><div class="out-cell" id="c_td_train">$0</div></td>
+              <td><input type="number" id="c_td_hrs" value="0" min="0" oninput="calcConsultant()"></td>
+              <td><input type="number" id="c_td_rate" value="188" min="0" oninput="calcConsultant()"></td>
+              <td><div class="out-cell" id="c_td_opp">$0</div></td>
+              <td><div class="out-cell green" id="c_td_total">$0</div></td>
+            </tr>
+            <tr class="totals-row">
+              <td colspan="3" style="font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Totals</td>
+              <td><div class="out-cell" id="c_t_train" style="background:transparent;">$0</div></td>
+              <td></td><td></td>
+              <td><div class="out-cell" id="c_t_opp" style="background:transparent;">$0</div></td>
+              <td><div class="out-cell green" id="c_t_total" style="background:transparent;">$0</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calc-summary-bar" style="grid-template-columns:repeat(4,1fr); margin-top:14px;">
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="c_sum_heads">0</div>
+          <div class="calc-summary-lbl">Total Consultants</div>
+        </div>
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="c_sum_train">$0</div>
+          <div class="calc-summary-lbl">Training Cost</div>
+        </div>
+        <div class="calc-summary-card">
+          <div class="calc-summary-val" id="c_sum_opp">$0</div>
+          <div class="calc-summary-lbl">Lost Hour Opp Cost</div>
+        </div>
+        <div class="calc-summary-card accent">
+          <div class="calc-summary-val" id="c_sum_total">$0</div>
+          <div class="calc-summary-lbl">Total Launch Cost</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function fmt(n) {
+        if (Math.abs(n) >= 1e9) return '$' + (n/1e9).toFixed(1) + 'B';
+        if (Math.abs(n) >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
+        if (Math.abs(n) >= 1e3) return '$' + Math.round(n/1000).toLocaleString() + 'K';
+        return '$' + Math.round(n).toLocaleString();
+      }
+      function fmtFull(n) {
+        return '$' + Math.round(n).toLocaleString();
+      }
+      function v(id) { return parseFloat(document.getElementById(id).value) || 0; }
+      function set(id, val) { document.getElementById(id).textContent = val; }
+
+      function updateMarginLabel() { /* no-op – slider removed */ }
+
+      function calcRevenue() {
+        var tiers = ['l','m','s'];
+        var totDeals = 0, totRev = 0, totMgn = 0;
+        tiers.forEach(function(t) {
+          var sow    = v(t+'_sow');
+          var margin = v(t+'_mgn_pct') / 100;
+          var deals  = v(t+'_q1') + v(t+'_q2') + v(t+'_q3') + v(t+'_q4');
+          var rev    = sow * deals;
+          var mgn    = rev * margin;
+          set(t+'_deals', Math.round(deals));
+          set(t+'_rev',   fmtFull(rev));
+          set(t+'_margin',fmtFull(mgn));
+          totDeals += deals; totRev += rev; totMgn += mgn;
+        });
+        set('t_deals',   Math.round(totDeals));
+        set('t_rev',     fmtFull(totRev));
+        set('t_margin',  fmtFull(totMgn));
+        set('sum_deals', Math.round(totDeals));
+        set('sum_rev',   fmt(totRev));
+        set('sum_margin',fmt(totMgn));
+        set('sum_avg_deal', totDeals > 0 ? fmt(totRev / totDeals) : '$0');
+        /* blended margin for summary label */
+        var blended = totRev > 0 ? Math.round(totMgn / totRev * 100) : 0;
+        set('sum_pct', blended);
+      }
+
+      function calcFunnel() {
+        var tiers = ['l','m','s'];
+        var totWins = 0, totOppsQ = 0, totOppsM = 0, totAnn = 0;
+        var wRateSum = 0, wRateCount = 0;
+        tiers.forEach(function(t) {
+          var rate = Math.max(1, v('fw_'+t+'_rate')) / 100;
+          var wins = v('fw_'+t+'_wins');
+          var oppsQ = rate > 0 ? wins / rate : 0;
+          var oppsM = oppsQ / 3;
+          var ann = wins * 4;
+          set('fw_'+t+'_opps_q', oppsQ.toFixed(1));
+          set('fw_'+t+'_opps_m', oppsM.toFixed(1));
+          set('fw_'+t+'_ann', Math.round(ann));
+          totWins += wins; totOppsQ += oppsQ; totOppsM += oppsM; totAnn += ann;
+          wRateSum += rate * 100; wRateCount++;
+        });
+        set('fw_t_wins', Math.round(totWins));
+        set('fw_t_opps_q', totOppsQ.toFixed(1));
+        set('fw_t_opps_m', totOppsM.toFixed(1));
+        set('fw_t_ann', Math.round(totAnn));
+        set('fw_sum_opps_m', totOppsM.toFixed(1));
+        set('fw_sum_ann', Math.round(totAnn));
+        set('fw_sum_wr', Math.round(wRateSum / wRateCount) + '%');
+      }
+
+      function calcConsultant() {
+        var tiers = ['nt','td'];
+        var totTrain = 0, totOpp = 0, totTotal = 0, totHeads = 0;
+        tiers.forEach(function(t) {
+          var heads = v('c_'+t+'_heads');
+          var price = v('c_'+t+'_price');
+          var hrs   = v('c_'+t+'_hrs');
+          var rate  = v('c_'+t+'_rate');
+          var train = heads * price;
+          var opp   = heads * hrs * rate;
+          var total = train + opp;
+          set('c_'+t+'_train', fmtFull(train));
+          set('c_'+t+'_opp',   fmtFull(opp));
+          set('c_'+t+'_total', fmtFull(total));
+          totHeads += heads; totTrain += train; totOpp += opp; totTotal += total;
+        });
+        set('c_t_train',   fmtFull(totTrain));
+        set('c_t_opp',     fmtFull(totOpp));
+        set('c_t_total',   fmtFull(totTotal));
+        set('c_sum_heads', Math.round(totHeads));
+        set('c_sum_train', fmt(totTrain));
+        set('c_sum_opp',   fmt(totOpp));
+        set('c_sum_total', fmt(totTotal));
+      }
+
+      calcRevenue();
+      calcFunnel();
+      calcConsultant();
+    </script>
+  </div>
+
+  <!-- TAB 3: STAGWELL ACTIVATION -->
+  <div class="tab-panel" id="tab-3">
+    <div class="tab-header">
+      <div class="tab-title-block">
+        <div class="tab-accent-pill" style="background:#F3F0FF; color:#6D28D9;">
+          <span>03</span> · Agency Activation
+        </div>
+        <h2 class="tab-h2">Stagwell Activation<br>Across Agencies</h2>
+        <p class="tab-subtitle">Coordinated rollout strategy across the Stagwell agency network — enabling internal adoption, cross-sell, and co-selling motions.</p>
+      </div>
+      <div class="tab-nav-btns">
+        <button class="btn-nav" onclick="switchTab(2)">← Business Plan</button>
+        <button class="btn-nav primary" onclick="switchTab(4)">GTM Assets →</button>
+      </div>
+    </div>
+
+
+    <style>
+      /* ── SCORING TABLE ── */
+      .score-controls {
+        display: flex; align-items: center; gap: 12px;
+        margin-bottom: 16px; flex-wrap: wrap;
+      }
+      .score-filter-btn {
+        border: 1.5px solid var(--border); background: var(--surface);
+        border-radius: 20px; padding: 5px 14px; font-size: 12px;
+        font-weight: 500; color: var(--text-secondary); cursor: pointer;
+        font-family: 'DM Sans', sans-serif; transition: all 0.15s;
+      }
+      .score-filter-btn.active, .score-filter-btn:hover {
+        background: var(--navy); color: #fff; border-color: var(--navy);
+      }
+      .score-legend {
+        display: flex; align-items: center; gap: 10px;
+        margin-left: auto; font-size: 11px; color: var(--text-muted);
+      }
+      .legend-dot {
+        width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+      }
+
+      .score-wrap { overflow-x: auto; }
+      .score-table { width: 100%; border-collapse: collapse; min-width: 780px; }
+      .score-table thead th {
+        background: var(--navy); color: #fff; padding: 10px 12px;
+        font-size: 11px; font-weight: 600; letter-spacing: 0.4px;
+        text-transform: uppercase; text-align: center; white-space: nowrap;
+      }
+      .score-table thead th.agency-col { text-align: left; border-radius: 8px 0 0 0; min-width: 180px; }
+      .score-table thead th:last-child { border-radius: 0 8px 0 0; }
+      .score-table thead th.dim-header {
+        border-left: 1px solid rgba(255,255,255,0.12);
+        max-width: 130px; line-height: 1.3;
+      }
+      .score-table tbody tr {
+        border-bottom: 1px solid var(--border);
+        transition: background 0.1s;
+      }
+      .score-table tbody tr:last-child { border-bottom: none; }
+      .score-table tbody tr:hover { background: #F7F9FF; }
+      .score-table td { padding: 10px 12px; vertical-align: middle; }
+      .score-table td.agency-col { padding: 10px 14px; }
+
+      .ag-name { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+      .ag-desc { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+      .ag-tags { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
+      .ag-tag {
+        font-size: 10px; font-weight: 500; padding: 2px 7px;
+        border-radius: 10px; white-space: nowrap;
+      }
+      .tag-mr  { background: #E0F7FC; color: #0077A3; }
+      .tag-cm  { background: #F3F0FF; color: #6D28D9; }
+      .tag-cr  { background: #FFF7ED; color: #C2410C; }
+      .tag-dat { background: #F0FDF4; color: #16A34A; }
+      .tag-med { background: #FFF9E0; color: #A16207; }
+
+      /* Pip scorer */
+      .pip-scorer { display: flex; gap: 4px; justify-content: center; align-items: center; }
+      .pip {
+        width: 18px; height: 18px; border-radius: 50%;
+        border: 2px solid #D1D5E8; background: transparent;
+        cursor: pointer; transition: all 0.12s; flex-shrink: 0;
+        display: inline-block;
+      }
+      .pip.filled-1 { background: #EF4444; border-color: #EF4444; }
+      .pip.filled-2 { background: #F97316; border-color: #F97316; }
+      .pip.filled-3 { background: #EAB308; border-color: #EAB308; }
+      .pip.filled-4 { background: #22C55E; border-color: #22C55E; }
+      .pip.filled-5 { background: #0ABCD4; border-color: #0ABCD4; }
+      .pip:hover { transform: scale(1.2); }
+
+      .score-num {
+        font-size: 11px; font-weight: 700; min-width: 16px;
+        text-align: center; margin-left: 4px;
+      }
+
+      /* Overall score badge */
+      .overall-badge {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 36px; height: 36px; border-radius: 50%;
+        font-size: 13px; font-weight: 700; margin: 0 auto;
+      }
+      .ob-low   { background: #FEE2E2; color: #B91C1C; }
+      .ob-med   { background: #FEF9C3; color: #A16207; }
+      .ob-high  { background: #DCFCE7; color: #15803D; }
+      .ob-top   { background: #E0F7FC; color: #0077A3; }
+
+      /* Summary row */
+      .score-summary-row {
+        display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+        margin-top: 14px;
+      }
+      .score-sum-card {
+        background: var(--bg); border-radius: 8px; padding: 12px 14px; text-align: center;
+      }
+      .score-sum-val { font-size: 22px; font-weight: 700; color: var(--navy); }
+      .score-sum-lbl { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+
+      .sort-btn {
+        font-size: 10px; cursor: pointer; color: rgba(255,255,255,0.55);
+        margin-left: 4px; vertical-align: middle;
+      }
+      .sort-btn:hover { color: #fff; }
+    </style>
+
+    <!-- SUMMARY METRICS -->
+    <div class="metric-row">
+      <div class="metric-card">
+        <div class="metric-value">19</div>
+        <div class="metric-label">Agencies Scored</div>
+        <div class="metric-delta delta-tbd">Full Stagwell roster</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ag_high_count">—</div>
+        <div class="metric-label">High Readiness (4–5)</div>
+        <div class="metric-delta delta-up" id="ag_high_pct">Loading…</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ag_avg_overall">—</div>
+        <div class="metric-label">Avg Overall Score</div>
+        <div class="metric-delta delta-tbd">Out of 5.0</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ag_top_agency">—</div>
+        <div class="metric-label">Top Readiness Agency</div>
+        <div class="metric-delta delta-up" id="ag_top_score">Highest overall score</div>
+      </div>
+    </div>
+
+    <!-- LEGEND + FILTER CONTROLS -->
+    <div class="content-card" style="margin-bottom:16px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; flex-wrap:wrap; gap:10px;">
+        <div>
+          <div class="card-label">Adoption Scorecard</div>
+          <div class="card-title" style="margin-bottom:2px;">Agency Readiness Matrix · All 19 Stagwell Agencies</div>
+          <div class="card-desc">Click any scoring dot to update ratings. Scores are 1 (early stage) → 5 (fully operational).</div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <button class="score-filter-btn active" onclick="filterAgencies('all', this)">All Agencies</button>
+          <button class="score-filter-btn" onclick="filterAgencies('high', this)">High Readiness</button>
+          <button class="score-filter-btn" onclick="filterAgencies('mr', this)">Market Research</button>
+          <button class="score-filter-btn" onclick="filterAgencies('cm', this)">Communications</button>
+          <button class="score-filter-btn" onclick="filterAgencies('cr', this)">Creative</button>
+        </div>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:12px; flex-wrap:wrap;">
+        <div style="font-size:11px; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px;">Score key:</div>
+        <div style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--text-muted);">
+          <span class="pip filled-1" style="width:12px;height:12px;cursor:default;"></span> 1 · Early stage
+        </div>
+        <div style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--text-muted);">
+          <span class="pip filled-2" style="width:12px;height:12px;cursor:default;"></span> 2 · Developing
+        </div>
+        <div style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--text-muted);">
+          <span class="pip filled-3" style="width:12px;height:12px;cursor:default;"></span> 3 · In progress
+        </div>
+        <div style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--text-muted);">
+          <span class="pip filled-4" style="width:12px;height:12px;cursor:default;"></span> 4 · Proficient
+        </div>
+        <div style="display:flex; align-items:center; gap:5px; font-size:11px; color:var(--text-muted);">
+          <span class="pip filled-5" style="width:12px;height:12px;cursor:default;"></span> 5 · Fully operational
+        </div>
+      </div>
+
+      <div class="score-wrap">
+        <table class="score-table" id="agencyTable">
+          <thead>
+            <tr>
+              <th class="agency-col">Agency &amp; Description</th>
+              <th class="dim-header">Solution<br>Relevance</th>
+              <th class="dim-header">Learning<br>TMC</th>
+              <th class="dim-header">Scope &amp;<br>Sell</th>
+              <th class="dim-header">Deploy &amp;<br>Deliver</th>
+              <th class="dim-header" style="border-radius:0 8px 0 0;">Overall<br><span class="sort-btn" onclick="sortByOverall()">▼ sort</span></th>
+            </tr>
+          </thead>
+          <tbody id="agencyTbody">
+          </tbody>
+        </table>
+      </div>
+
+      <div class="score-summary-row" id="scoreSummary">
+        <div class="score-sum-card">
+          <div class="score-sum-val" id="ss_rel">—</div>
+          <div class="score-sum-lbl">Avg Relevance</div>
+        </div>
+        <div class="score-sum-card">
+          <div class="score-sum-val" id="ss_learn">—</div>
+          <div class="score-sum-lbl">Avg Learning</div>
+        </div>
+        <div class="score-sum-card">
+          <div class="score-sum-val" id="ss_sell">—</div>
+          <div class="score-sum-lbl">Avg Scope &amp; Sell</div>
+        </div>
+        <div class="score-sum-card">
+          <div class="score-sum-val" id="ss_deploy">—</div>
+          <div class="score-sum-lbl">Avg Deploy &amp; Deliver</div>
+        </div>
+        <div class="score-sum-card" style="background:#E0F7FC;">
+          <div class="score-sum-val" id="ss_overall" style="color:var(--navy);">—</div>
+          <div class="score-sum-lbl">Portfolio Avg</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function() {
+      var agencies = [
+        { name: '72andSunny',          initials: '72', desc: 'Creative agency focused on brand transformation.',                          tags: ['cr'],         scores: [4, 2, 3, 2] },
+        { name: 'Anomaly',             initials: 'AN', desc: 'Advertising and brand strategy.',                                           tags: ['cr','cm'],     scores: [3, 2, 3, 2] },
+        { name: 'Code and Theory',     initials: 'CT', desc: 'Digital transformation and creative technology.',                           tags: ['cr','dat'],    scores: [5, 4, 4, 4] },
+        { name: 'GALE',                initials: 'GA', desc: 'Data-driven marketing and advertising.',                                    tags: ['mr','dat'],    scores: [5, 4, 4, 3] },
+        { name: 'Assembly',            initials: 'AS', desc: 'Global omnichannel media agency.',                                          tags: ['med','cr'],    scores: [4, 3, 4, 3] },
+        { name: 'Forsman & Bodenfors', initials: 'FB', desc: 'Creative collective.',                                                      tags: ['cr'],          scores: [3, 2, 2, 2] },
+        { name: 'Doner / DonerColle',  initials: 'DO', desc: 'Brand marketing and creative.',                                             tags: ['cr'],          scores: [3, 2, 3, 2] },
+        { name: 'Allison+Partners',    initials: 'AP', desc: 'Public relations and communications.',                                      tags: ['cm'],          scores: [4, 3, 3, 3] },
+        { name: 'NRG',                 initials: 'NR', desc: 'Consumer and market research.',                                             tags: ['mr'],          scores: [5, 4, 4, 3] },
+        { name: 'SKDK',                initials: 'SK', desc: 'Public affairs and political consulting.',                                  tags: ['cm'],          scores: [2, 2, 2, 1] },
+        { name: 'YML',                 initials: 'YM', desc: 'Customer experience and digital design.',                                   tags: ['cr','dat'],    scores: [4, 3, 3, 3] },
+        { name: 'Observatory',         initials: 'OB', desc: 'Content and brand marketing.',                                              tags: ['cr','cm'],     scores: [3, 2, 2, 2] },
+        { name: 'Locaria',             initials: 'LO', desc: 'Multilingual content and search.',                                          tags: ['cm'],          scores: [2, 2, 2, 2] },
+        { name: 'Hunter',              initials: 'HU', desc: 'Public relations and consumer marketing.',                                  tags: ['cm'],          scores: [3, 2, 3, 2] },
+        { name: 'Goodstuff',           initials: 'GS', desc: 'Media planning and buying.',                                                tags: ['med','mr'],    scores: [4, 3, 3, 3] },
+        { name: 'Colle McVoy',         initials: 'CM', desc: 'Full-service creative agency.',                                             tags: ['cr'],          scores: [3, 2, 3, 2] },
+        { name: 'Team Epiphany',       initials: 'TE', desc: 'Brand marketing and experiential.',                                         tags: ['cr'],          scores: [2, 1, 2, 1] },
+        { name: 'INK',                 initials: 'IN', desc: 'Travel content and media.',                                                 tags: ['med','cm'],    scores: [2, 2, 2, 2] },
+        { name: 'Left Field Labs',     initials: 'LF', desc: 'Digital innovation and experience design.',                                 tags: ['cr','dat'],    scores: [4, 3, 3, 3] }
+      ];
+
+      var tagMeta = {
+        mr:  { label: 'Market Research', cls: 'tag-mr' },
+        cm:  { label: 'Communications',  cls: 'tag-cm' },
+        cr:  { label: 'Creative',        cls: 'tag-cr' },
+        dat: { label: 'Data / Tech',     cls: 'tag-dat' },
+        med: { label: 'Media',           cls: 'tag-med' }
+      };
+
+      var initials_colors = [
+        {bg:'#E0F7FC',fg:'#0077A3'},{bg:'#F3F0FF',fg:'#6D28D9'},{bg:'#F0FDF4',fg:'#16A34A'},
+        {bg:'#FFF9E0',fg:'#A16207'},{bg:'#FFF7ED',fg:'#EA580C'},{bg:'#E0ECFF',fg:'#1A45C4'},
+        {bg:'#DCFCE7',fg:'#15803D'},{bg:'#FBEAF0',fg:'#9D174D'},{bg:'#EDE9FE',fg:'#5B21B6'},
+        {bg:'#FEF3C7',fg:'#92400E'},{bg:'#E0F2FE',fg:'#075985'},{bg:'#FCE7F3',fg:'#9D174D'},
+        {bg:'#F0FDF4',fg:'#166534'},{bg:'#FEF9C3',fg:'#854D0E'},{bg:'#E0F7FC',fg:'#155E75'},
+        {bg:'#F5F3FF',fg:'#4C1D95'},{bg:'#FFF7ED',fg:'#7C2D12'},{bg:'#EFF6FF',fg:'#1E40AF'},
+        {bg:'#ECFDF5',fg:'#064E3B'}
+      ];
+
+      var dimLabels = ['Solution Relevance','Learning TMC','Scope & Sell','Deploy & Deliver'];
+      var currentFilter = 'all';
+
+      function pipColor(val) {
+        if (val<=1) return 'filled-1';
+        if (val==2) return 'filled-2';
+        if (val==3) return 'filled-3';
+        if (val==4) return 'filled-4';
+        return 'filled-5';
+      }
+
+      function overallClass(avg) {
+        if (avg < 2)   return 'ob-low';
+        if (avg < 3)   return 'ob-med';
+        if (avg < 4.2) return 'ob-high';
+        return 'ob-top';
+      }
+
+      function buildPips(agIdx, dimIdx) {
+        var val = agencies[agIdx].scores[dimIdx];
+        var html = '<div class="pip-scorer">';
+        for (var p = 1; p <= 5; p++) {
+          var cls = p <= val ? pipColor(val) : '';
+          html += '<span class="pip ' + cls + '" '
+                + 'data-ag="'+agIdx+'" data-dim="'+dimIdx+'" data-val="'+p+'" '
+                + 'onclick="setPip(this)"></span>';
+        }
+        html += '<span class="score-num" id="sn_'+agIdx+'_'+dimIdx+'" style="color:'+
+                 (val>=4?'#15803D':val==3?'#A16207':'#B91C1C')+'">'+val+'</span>';
+        html += '</div>';
+        return html;
+      }
+
+      function renderTable() {
+        var tbody = document.getElementById('agencyTbody');
+        var rows = '';
+        agencies.forEach(function(ag, i) {
+          var col = initials_colors[i % initials_colors.length];
+          var avg = (ag.scores[0]+ag.scores[1]+ag.scores[2]+ag.scores[3])/4;
+          var oc = overallClass(avg);
+          var tagHtml = ag.tags.map(function(t){
+            return '<span class="ag-tag '+tagMeta[t].cls+'">'+tagMeta[t].label+'</span>';
+          }).join('');
+
+          var matchFilter = currentFilter === 'all'
+            || (currentFilter === 'high' && avg >= 3.5)
+            || ag.tags.indexOf(currentFilter) > -1;
+
+          rows += '<tr id="agRow_'+i+'" data-tags="'+ag.tags.join(' ')+'" data-avg="'+avg.toFixed(2)+'" style="display:'+(matchFilter?'':'none')+'">';
+          rows += '<td class="agency-col">';
+          rows += '<div style="display:flex; align-items:center; gap:10px;">';
+          rows += '<div style="width:38px;height:38px;border-radius:8px;background:'+col.bg+';color:'+col.fg+';font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">'+ag.initials+'</div>';
+          rows += '<div><div class="ag-name">'+ag.name+'</div><div class="ag-desc">'+ag.desc+'</div><div class="ag-tags">'+tagHtml+'</div></div>';
+          rows += '</div></td>';
+          for (var d = 0; d < 4; d++) {
+            rows += '<td style="text-align:center;">'+buildPips(i, d)+'</td>';
+          }
+          rows += '<td style="text-align:center;"><div class="overall-badge '+oc+'" id="ob_'+i+'">'+avg.toFixed(1)+'</div></td>';
+          rows += '</tr>';
+        });
+        tbody.innerHTML = rows;
+        updateSummary();
+        updateMetrics();
+      }
+
+      window.setPip = function(el) {
+        var ag  = parseInt(el.dataset.ag);
+        var dim = parseInt(el.dataset.dim);
+        var val = parseInt(el.dataset.val);
+        agencies[ag].scores[dim] = val;
+        var row = document.getElementById('agRow_'+ag);
+        var cell = row.cells[dim + 1];
+        cell.innerHTML = buildPips(ag, dim);
+        var avg = (agencies[ag].scores[0]+agencies[ag].scores[1]+agencies[ag].scores[2]+agencies[ag].scores[3])/4;
+        var ob = document.getElementById('ob_'+ag);
+        ob.textContent = avg.toFixed(1);
+        ob.className = 'overall-badge ' + overallClass(avg);
+        row.dataset.avg = avg.toFixed(2);
+        updateSummary();
+        updateMetrics();
+      };
+
+      function updateSummary() {
+        var vis = getVisible();
+        if (!vis.length) return;
+        var sums = [0,0,0,0,0];
+        vis.forEach(function(i) {
+          var sc = agencies[i].scores;
+          sc.forEach(function(v,d){ sums[d]+=v; });
+          sums[4]+=(sc[0]+sc[1]+sc[2]+sc[3])/4;
+        });
+        var n = vis.length;
+        ['ss_rel','ss_learn','ss_sell','ss_deploy','ss_overall'].forEach(function(id,idx){
+          document.getElementById(id).textContent = (sums[idx]/n).toFixed(1);
+        });
+      }
+
+      function updateMetrics() {
+        var vis = getVisible();
+        if (!vis.length) return;
+        var highs = vis.filter(function(i){
+          return (agencies[i].scores[0]+agencies[i].scores[1]+agencies[i].scores[2]+agencies[i].scores[3])/4 >= 3.5;
+        });
+        var totalAvg = vis.reduce(function(s,i){
+          return s+(agencies[i].scores[0]+agencies[i].scores[1]+agencies[i].scores[2]+agencies[i].scores[3])/4;
+        },0) / vis.length;
+        var topIdx = vis.reduce(function(best,i){
+          var a=(agencies[i].scores[0]+agencies[i].scores[1]+agencies[i].scores[2]+agencies[i].scores[3])/4;
+          var b=(agencies[best].scores[0]+agencies[best].scores[1]+agencies[best].scores[2]+agencies[best].scores[3])/4;
+          return a>b?i:best;
+        }, vis[0]);
+        var topAvg = (agencies[topIdx].scores[0]+agencies[topIdx].scores[1]+agencies[topIdx].scores[2]+agencies[topIdx].scores[3])/4;
+
+        document.getElementById('ag_high_count').textContent = highs.length;
+        document.getElementById('ag_high_pct').textContent = Math.round(highs.length/vis.length*100) + '% of visible agencies';
+        document.getElementById('ag_avg_overall').textContent = totalAvg.toFixed(1);
+        document.getElementById('ag_top_agency').textContent = agencies[topIdx].name;
+        document.getElementById('ag_top_score').textContent = 'Score: ' + topAvg.toFixed(1) + ' / 5.0';
+      }
+
+      function getVisible() {
+        var vis = [];
+        agencies.forEach(function(_,i){
+          var row = document.getElementById('agRow_'+i);
+          if (row && row.style.display !== 'none') vis.push(i);
+        });
+        return vis;
+      }
+
+      window.filterAgencies = function(filter, btn) {
+        currentFilter = filter;
+        document.querySelectorAll('.score-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        agencies.forEach(function(ag, i) {
+          var row = document.getElementById('agRow_'+i);
+          if (!row) return;
+          var avg = parseFloat(row.dataset.avg);
+          var show = filter === 'all'
+            || (filter === 'high' && avg >= 3.5)
+            || ag.tags.indexOf(filter) > -1;
+          row.style.display = show ? '' : 'none';
+        });
+        updateSummary();
+        updateMetrics();
+      };
+
+      window.sortByOverall = function() {
+        var tbody = document.getElementById('agencyTbody');
+        var rows = Array.from(tbody.querySelectorAll('tr'));
+        rows.sort(function(a,b){ return parseFloat(b.dataset.avg)-parseFloat(a.dataset.avg); });
+        rows.forEach(function(r){ tbody.appendChild(r); });
+      };
+
+      renderTable();
+    })();
+    </script>
+  </div>
+
+  <!-- TAB 4: GTM ASSETS & IP -->
+  <div class="tab-panel" id="tab-4">
+    <div class="tab-header">
+      <div class="tab-title-block">
+        <div class="tab-accent-pill" style="background:#F0FDF4; color:#16A34A;">
+          <span>04</span> · GTM Assets
+        </div>
+        <h2 class="tab-h2">Go-To-Market Assets<br>&amp; Intellectual Property</h2>
+        <p class="tab-subtitle">Core messaging, sales collateral, proprietary methodologies, and platform IP that differentiate The Marketing Cloud in market.</p>
+      </div>
+      <div class="tab-nav-btns">
+        <button class="btn-nav" onclick="switchTab(3)">← Stagwell Activation</button>
+        <button class="btn-nav primary" onclick="switchTab(5)">Field Activation →</button>
+      </div>
+    </div>
+
+
+    <style>
+      /* ── SOLUTION TYPE CARDS ── */
+      .sol-type-grid {
+        display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 24px;
+      }
+      .sol-type-card {
+        border-radius: 12px; padding: 20px 18px; border: 2px solid transparent;
+      }
+      .sol-type-label {
+        font-size: 10px; font-weight: 700; letter-spacing: 2px;
+        text-transform: uppercase; margin-bottom: 6px;
+      }
+      .sol-type-title { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+      .sol-type-desc { font-size: 12px; line-height: 1.55; }
+      .sol-type-badge {
+        display: inline-block; font-size: 10px; font-weight: 600;
+        padding: 3px 9px; border-radius: 10px; margin-top: 10px;
+        letter-spacing: 0.3px;
+      }
+
+      /* Perspective — yellow-green */
+      .stype-p { background: #F7FCD4; border-color: #C8E050; }
+      .stype-p .sol-type-label { color: #5A6E00; }
+      .stype-p .sol-type-title { color: #3D4C00; }
+      .stype-p .sol-type-desc  { color: #5A6E00; }
+      .stype-p .sol-type-badge { background: #C8E050; color: #3D4C00; }
+
+      /* Offering — lavender */
+      .stype-o { background: #F0EDFF; border-color: #B8ACEE; }
+      .stype-o .sol-type-label { color: #4B3CA7; }
+      .stype-o .sol-type-title { color: #31278A; }
+      .stype-o .sol-type-desc  { color: #4B3CA7; }
+      .stype-o .sol-type-badge { background: #B8ACEE; color: #31278A; }
+
+      /* Accelerator — teal */
+      .stype-a { background: #E0F7FC; border-color: #0ABCD4; }
+      .stype-a .sol-type-label { color: #0077A3; }
+      .stype-a .sol-type-title { color: #004F6E; }
+      .stype-a .sol-type-desc  { color: #0077A3; }
+      .stype-a .sol-type-badge { background: #0ABCD4; color: #003D57; }
+
+      .pillar-map-grid {
+        display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 24px;
+      }
+      .pillar-map-card {
+        border: 1.5px solid var(--border); border-radius: 10px;
+        padding: 14px 16px; display:flex; flex-direction:column; gap:6px;
+      }
+      .pmc-top { display:flex; align-items:center; gap:10px; }
+      .pmc-icon {
+        width:36px; height:36px; border-radius:8px;
+        display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0;
+      }
+      .pmc-name { font-size:14px; font-weight:700; color:var(--text-primary); }
+      .pmc-type { font-size:11px; font-weight:600; padding:3px 9px; border-radius:10px; align-self:flex-start; }
+
+      /* ── ASSET TRACKER ── */
+      .tracker-controls {
+        display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap;
+      }
+      .tracker-filter-btn {
+        border:1.5px solid var(--border); background:var(--surface); border-radius:20px;
+        padding:5px 14px; font-size:12px; font-weight:500; color:var(--text-secondary);
+        cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.15s;
+      }
+      .tracker-filter-btn.active, .tracker-filter-btn:hover {
+        background:var(--navy); color:#fff; border-color:var(--navy);
+      }
+
+      .asset-matrix { width:100%; border-collapse:collapse; min-width:700px; }
+      .asset-matrix thead tr th {
+        background:var(--navy); color:#fff; padding:10px 12px;
+        font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase;
+        text-align:center;
+      }
+      .asset-matrix thead tr th.asset-name-col { text-align:left; min-width:210px; border-radius:8px 0 0 0; }
+      .asset-matrix thead tr.group-row th {
+        background:#F4F7FD; color:var(--text-secondary); padding:6px 12px;
+        font-size:10px; letter-spacing:1px; text-transform:uppercase;
+        border-bottom:1px solid var(--border);
+      }
+      .asset-matrix thead tr.group-row th.asset-name-col { background:#F4F7FD; }
+
+      .asset-matrix tbody tr { border-bottom:1px solid var(--border); }
+      .asset-matrix tbody tr:last-child { border-bottom:none; }
+      .asset-matrix tbody tr:hover { background:#F7F9FF; }
+      .asset-matrix tbody td { padding:9px 12px; vertical-align:middle; }
+      .asset-matrix tbody td.asset-name-col { padding:9px 14px; }
+
+      .asset-row-label { font-size:13px; font-weight:500; color:var(--text-primary); }
+      .asset-section-divider td {
+        background:#F4F7FD; font-size:10px; font-weight:700;
+        letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted);
+        padding:6px 14px; border-top:1.5px solid var(--border);
+      }
+
+      /* Requirement badge */
+      .req-wrap { display:flex; flex-direction:column; align-items:center; gap:6px; }
+      .req-badge {
+        font-size:10px; font-weight:700; padding:2px 8px; border-radius:8px;
+        text-transform:uppercase; letter-spacing:0.4px; white-space:nowrap;
+      }
+      .req-r  { background:#EDE9FE; color:#5B21B6; }
+      .req-o  { background:#FEF9C3; color:#854D0E; }
+      .req-na { color:var(--text-muted); font-size:12px; }
+
+      /* Status cycle button */
+      .status-btn {
+        border:none; border-radius:6px; font-size:11px; font-weight:600;
+        padding:4px 10px; cursor:pointer; transition:all 0.15s;
+        font-family:'DM Sans',sans-serif; white-space:nowrap;
+      }
+      .s-todo    { background:#F1F5F9; color:#64748B; }
+      .s-wip     { background:#FEF9C3; color:#92400E; }
+      .s-done    { background:#DCFCE7; color:#15803D; }
+
+      /* Progress summary */
+      .progress-summary {
+        display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px;
+      }
+      .prog-card {
+        border-radius:10px; padding:14px 16px; text-align:center;
+      }
+      .prog-val { font-size:24px; font-weight:700; margin-bottom:2px; }
+      .prog-lbl { font-size:11px; text-transform:uppercase; letter-spacing:0.5px; }
+      .prog-bar-wrap { margin-top:10px; background:rgba(255,255,255,0.3); border-radius:4px; height:6px; overflow:hidden; }
+      .prog-bar { height:100%; border-radius:4px; transition:width 0.3s; }
+    </style>
+
+    <!-- SOLUTION FRAMEWORK -->
+    <div style="margin-bottom:8px;">
+      <div class="section-label" style="margin-bottom:14px;">Solution Framework</div>
+      <div class="sol-type-grid">
+        <div class="sol-type-card stype-p">
+          <div class="sol-type-label">Perspective</div>
+          <div class="sol-type-title">Establish market eminence</div>
+          <div class="sol-type-desc">Thought leadership content that demonstrates expertise and viewpoint — designed to address customer needs and market opportunities.</div>
+          <span class="sol-type-badge">Awareness &amp; Credibility</span>
+        </div>
+        <div class="sol-type-card stype-o">
+          <div class="sol-type-label">Offering</div>
+          <div class="sol-type-title">Solve a client problem</div>
+          <div class="sol-type-desc">A defined set of services or products with clear deliverables, showcasing TMC's capabilities and value proposition within a specific domain.</div>
+          <span class="sol-type-badge">Sales &amp; Delivery</span>
+        </div>
+        <div class="sol-type-card stype-a">
+          <div class="sol-type-label">Accelerator</div>
+          <div class="sol-type-title">Deliver value faster with code</div>
+          <div class="sol-type-desc">Reusable code, components, and tooling that hasten client project execution — showcasing TMC's technical depth and innovative approach.</div>
+          <span class="sol-type-badge">Technical IP &amp; Scale</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PILLAR → SOLUTION TYPE MAPPING -->
+    <div style="margin-bottom:24px;">
+      <div class="section-label" style="margin-bottom:14px;">TMC Solution Mapping</div>
+      <div class="pillar-map-grid">
+        <div class="pillar-map-card">
+          <div class="pmc-top">
+            <div class="pmc-icon" style="background:#E0F7FC;">📊</div>
+            <div>
+              <div class="pmc-name">Market Research</div>
+              <span class="pmc-type" style="background:#F0EDFF; color:#4B3CA7;">Offering</span>
+            </div>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">Brand metrics, insight communities, AI open-end analysis, consumer behavior — a defined service with clear client deliverables.</div>
+        </div>
+        <div class="pillar-map-card">
+          <div class="pmc-top">
+            <div class="pmc-icon" style="background:#F3F0FF;">📡</div>
+            <div>
+              <div class="pmc-name">Communications</div>
+              <span class="pmc-type" style="background:#F0EDFF; color:#4B3CA7;">Offering</span>
+            </div>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">Earned media tools, influencer marketing, 360° brand data — a packaged platform delivering measurable communications outcomes.</div>
+        </div>
+        <div class="pillar-map-card">
+          <div class="pmc-top">
+            <div class="pmc-icon" style="background:#FFF7ED;">🎨</div>
+            <div>
+              <div class="pmc-name">Creative &amp; Media</div>
+              <span class="pmc-type" style="background:#E0F7FC; color:#0077A3;">Accelerator</span>
+            </div>
+          </div>
+          <div style="font-size:12px; color:var(--text-secondary); line-height:1.5;">First-party data, location intelligence, AI campaign brief &amp; asset generation — reusable technical IP that accelerates creative execution.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASSET TRACKER -->
+    <div class="content-card">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+        <div>
+          <div class="card-label">Asset &amp; IP Tracker</div>
+          <div class="card-title" style="margin-bottom:4px;">Selling Asset Creation Status · All Three Pillars</div>
+          <div class="card-desc">Click any status badge to cycle through: <strong>To Do → In Progress → Complete</strong>. <strong>R</strong> = Required &nbsp;·&nbsp; <strong>O</strong> = Optional.</div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="tracker-filter-btn active" onclick="filterAssets('all',this)">All Assets</button>
+          <button class="tracker-filter-btn" onclick="filterAssets('todo',this)">To Do</button>
+          <button class="tracker-filter-btn" onclick="filterAssets('wip',this)">In Progress</button>
+          <button class="tracker-filter-btn" onclick="filterAssets('done',this)">Complete</button>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="asset-matrix" id="assetMatrix">
+          <thead>
+            <tr>
+              <th class="asset-name-col">Asset / IP Component</th>
+              <th colspan="1" style="border-left:1px solid rgba(255,255,255,0.15);">Market Research<br><span style="font-size:10px; font-weight:400; opacity:0.7;">Offering</span></th>
+              <th colspan="1" style="border-left:1px solid rgba(255,255,255,0.15);">Communications<br><span style="font-size:10px; font-weight:400; opacity:0.7;">Offering</span></th>
+              <th colspan="1" style="border-left:1px solid rgba(255,255,255,0.15); border-radius:0 8px 0 0;">Creative &amp; Media<br><span style="font-size:10px; font-weight:400; opacity:0.7;">Accelerator</span></th>
+            </tr>
+            <tr class="group-row" style="display:none;"><th class="asset-name-col"></th><th></th><th></th><th></th></tr>
+          </thead>
+          <tbody id="assetTbody"></tbody>
+        </table>
+      </div>
+
+      <!-- PROGRESS SUMMARY -->
+      <div class="progress-summary" id="progressSummary">
+        <div class="prog-card" style="background:#E0F7FC;">
+          <div class="prog-val" id="ps_done" style="color:#0077A3;">0</div>
+          <div class="prog-lbl" style="color:#0077A3;">Complete</div>
+          <div class="prog-bar-wrap"><div class="prog-bar" id="pb_done" style="background:#0ABCD4; width:0%;"></div></div>
+        </div>
+        <div class="prog-card" style="background:#FEF9C3;">
+          <div class="prog-val" id="ps_wip" style="color:#92400E;">0</div>
+          <div class="prog-lbl" style="color:#92400E;">In Progress</div>
+          <div class="prog-bar-wrap"><div class="prog-bar" id="pb_wip" style="background:#EAB308; width:0%;"></div></div>
+        </div>
+        <div class="prog-card" style="background:#F1F5F9;">
+          <div class="prog-val" id="ps_todo" style="color:#475569;">0</div>
+          <div class="prog-lbl" style="color:#475569;">To Do</div>
+          <div class="prog-bar-wrap"><div class="prog-bar" id="pb_todo" style="background:#94A3B8; width:0%;"></div></div>
+        </div>
+        <div class="prog-card" style="background:var(--navy);">
+          <div class="prog-val" id="ps_pct" style="color:#fff;">0%</div>
+          <div class="prog-lbl" style="color:rgba(255,255,255,0.55);">Overall Complete</div>
+          <div class="prog-bar-wrap" style="background:rgba(255,255,255,0.15);"><div class="prog-bar" id="pb_pct" style="background:var(--teal); width:0%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      /* R=Required, O=Optional, N=N/A  |  Offering cols: MR, Comms | Accelerator col: Creative */
+      /* reqs[i] = [MR_req, Comms_req, Creative_req] */
+      var assets = [
+        /* ── AWARENESS ASSETS ── */
+        { group:'Awareness & Thought Leadership', name:'Go-to-Market (GTM) Brief',           reqs:['R','R','R'] },
+        { group:'Awareness & Thought Leadership', name:'Blog Post / Whitepaper',              reqs:['R','R','R'] },
+        { group:'Awareness & Thought Leadership', name:'Social Media Content',               reqs:['R','R','R'] },
+        /* ── SALES ASSETS ── */
+        { group:'Sales Enablement',               name:'One-Page Overview / Solutions Brief', reqs:['R','R','R'] },
+        { group:'Sales Enablement',               name:'Approach / First Call Deck',          reqs:['R','R','R'] },
+        { group:'Sales Enablement',               name:'Customer Story / Case Study',         reqs:['R','R','R'] },
+        { group:'Sales Enablement',               name:'Solution Response Overview',          reqs:['R','R','R'] },
+        /* ── COMMERCIAL ASSETS ── */
+        { group:'Commercial & Legal',             name:'Sample Statement of Work (SOW)',      reqs:['R','R','R'] },
+        { group:'Commercial & Legal',             name:'IP Legal Language in SOW',            reqs:['N','N','R'] },
+        { group:'Commercial & Legal',             name:'Return on Investment (ROI) Template', reqs:['O','O','O'] },
+        /* ── DELIVERY ASSETS ── */
+        { group:'Delivery & Operations',          name:'Staffing Plan',                       reqs:['O','O','O'] },
+        { group:'Delivery & Operations',          name:'Project Plan',                        reqs:['O','O','O'] },
+        { group:'Delivery & Operations',          name:'Workshop Curriculum',                 reqs:['O','O','O'] },
+        { group:'Delivery & Operations',          name:'Use Case Library',                    reqs:['O','O','R'] },
+        /* ── TECHNICAL IP ── */
+        { group:'Technical IP & Accelerators',    name:'Product Demo / Demo Environment',    reqs:['O','O','R'] },
+        { group:'Technical IP & Accelerators',    name:'Reusable Code / Components',         reqs:['N','N','R'] },
+        { group:'Technical IP & Accelerators',    name:'AI Model / Proprietary Dataset',     reqs:['O','R','R'] },
+      ];
+
+      /* Combined requirement+status cycling */
+      var CYCLE_ALL = ['Required','To Do','In Progress','Complete','Blocked'];
+      var CYCLE_OPT = ['To Do','In Progress','Complete','Blocked'];
+      var CELL_CLASS = {
+        'Required':   'req-badge req-r',
+        'To Do':      'status-btn s-todo',
+        'In Progress':'status-btn s-wip',
+        'Complete':   'status-btn s-done',
+        'Blocked':    'status-btn s-blk'
+      };
+      var currentFilter = 'all';
+
+      function initState(req) {
+        if (req === 'N') return 'N/A';
+        return req === 'R' ? 'Required' : 'To Do';
+      }
+      var states = assets.map(function(a){ return a.reqs.map(initState); });
+
+      function nextState(s, req) {
+        if (s === 'N/A') return 'N/A';
+        var arr = req === 'R' ? CYCLE_ALL : CYCLE_OPT;
+        return arr[(arr.indexOf(s) + 1) % arr.length];
+      }
+
+      function cellClass(s) { return CELL_CLASS[s] || 'req-na'; }
+
+      function renderTable() {
+        var tbody = document.getElementById('assetTbody');
+        var lastGroup = '';
+        var html = '';
+        assets.forEach(function(a, i) {
+          if (a.group !== lastGroup) {
+            html += '<tr class="asset-section-divider"><td colspan="4">'+a.group+'</td></tr>';
+            lastGroup = a.group;
+          }
+          var anyMatch = currentFilter === 'all'
+            || states[i].some(function(s){ return s.toLowerCase().replace(/ /g,'') === currentFilter; });
+          html += '<tr id="ar_'+i+'" style="display:'+(anyMatch?'':'none')+'">';
+          html += '<td class="asset-name-col"><span class="asset-row-label">'+a.name+'</span></td>';
+          for (var c = 0; c < 3; c++) {
+            var s = states[i][c]; var req = a.reqs[c];
+            if (s === 'N/A') {
+              html += '<td style="text-align:center;"><span class="req-na">N/A</span></td>';
+            } else {
+              html += '<td style="text-align:center;"><button class="'+cellClass(s)+'" style="min-width:96px;"'
+                    + ' data-row="'+i+'" data-col="'+c+'" data-req="'+req+'" onclick="cycleAsset(this)">'+s+'</button></td>';
+            }
+          }
+          html += '</tr>';
+        });
+        tbody.innerHTML = html;
+        updateProgress();
+      }
+
+      window.cycleAsset = function(btn) {
+        var row=parseInt(btn.dataset.row), col=parseInt(btn.dataset.col), req=btn.dataset.req;
+        states[row][col] = nextState(states[row][col], req);
+        btn.textContent  = states[row][col];
+        btn.className    = cellClass(states[row][col]);
+        updateProgress();
+      };
+
+      window.filterAssets = function(f, btn) {
+        currentFilter = f;
+        document.querySelectorAll('.tracker-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        assets.forEach(function(_, i) {
+          var row = document.getElementById('ar_'+i);
+          if (!row) return;
+          var show = f === 'all' || states[i].some(function(s){ return s.toLowerCase().replace(/ /g,'') === f; });
+          row.style.display = show ? '' : 'none';
+        });
+      };
+
+      function updateProgress() {
+        var done=0, wip=0, todo=0, total=0;
+        assets.forEach(function(a, i) {
+          for (var c=0; c<3; c++) {
+            if (a.reqs[c]==='N') continue;
+            total++;
+            var s = states[i][c];
+            if (s==='Complete') done++;
+            else if (s==='In Progress') wip++;
+            else todo++;
+          }
+        });
+        document.getElementById('ps_done').textContent = done;
+        document.getElementById('ps_wip').textContent  = wip;
+        document.getElementById('ps_todo').textContent = todo;
+        var pct = total > 0 ? Math.round(done/total*100) : 0;
+        document.getElementById('ps_pct').textContent  = pct+'%';
+        document.getElementById('pb_done').style.width = Math.round(done/total*100)+'%';
+        document.getElementById('pb_wip').style.width  = Math.round(wip/total*100)+'%';
+        document.getElementById('pb_todo').style.width = Math.round(todo/total*100)+'%';
+        document.getElementById('pb_pct').style.width  = pct+'%';
+      }
+
+      /* inject .s-blk style */
+      var st2 = document.createElement('style');
+      st2.textContent = '.s-blk{background:#FEE2E2;color:#991B1B;border-radius:6px;font-size:11px;font-weight:600;padding:4px 10px;cursor:pointer;font-family:inherit;border:none;white-space:nowrap;}';
+      document.head.appendChild(st2);
+
+      renderTable();
+    })();
+    </script>
+  </div>
+
+  <!-- TAB 5: PALANTIR PARTNER ACTIVATION -->
+  <div class="tab-panel" id="tab-5">
+    <div class="tab-header">
+      <div class="tab-title-block">
+        <div class="tab-accent-pill" style="background:#FFF7ED; color:#EA580C;">
+          <span>05</span> · Partner Activation
+        </div>
+        <h2 class="tab-h2">Palantir Partner<br>Activation</h2>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAcCAYAAACTZsrFAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAANAElEQVR42u1ae0wcVRf/zewT2OWNPHYLCoWqtGlESI0CJRRELdVgbBqEWm1qApGiaayUKLa0bDWhjVI0PmJRUGJpMcaqIRBAELtdWovUtlJKFVOwRXm6LMvC7sz5/prJLrvLq+2XL/l6kslu5t577r3nd8/zDkNEhEUQz/MgIkgkEqc2m80GlmXBsizu0K0h6WI6cRwnAjI5OYlr165hcnISvr6+iIiIgIeHh1M/dzTfOWAY5qY2I/C+WT43S/Z7XPZaaAHiOI6IiM6cOUNbt24lrVZLEomEAJBMJqN77rmH8vLyqKenh4iIbDYb3QxZrVZxzv9ncgsMz/OikN98802SSqUEwO2jUqnovffemxccjuPIbDaT2Wym6elpslgs4jMzM+PyQCwF0KmpKSc+t5t4nnd6Nz09TWaz+abW4hYYQbgFBQWi8BUKBT3zzDNUWVlJtbW1dPjwYXr88ceJYRixz9tvv+0EjiDk3377jbRaLWm1WgoJCaHg4GDx0Wq1lJCQQDt37qQ///zT7aZdAUJEdOTIEdJoNPTSSy/dEs1dDCDC3PZrNZvN9PDDD1NERAQVFBQsey2YD5Tq6mpR4Pfffz91dna6ZNLY2EhhYWFi35aWFgc+AjDd3d0OGubr60s+Pj7k4+NDcrlcbAsLC6MrV64Qz/MLao4gnNLSUgJAmzdv/q8AY3/oOI4TgTGZTKRUKgkAZWRk3DpgeJ4nnufJaDSSRqMhlmVJq9XS4OCgKIi5DxHRL7/8Qt7e3sQwDMXHx5PNZhOFKvyeP3+eWJYllmXp1KlTZDKZ6N9//yWj0UhDQ0N04sQJCg0NddiUMFZYl/DMBUan0xHLsvTss8+6FIarsYvRirn9hXdDQ0NUWFhIGzZsoOnpabFtdnaWDh06RK+//jrV1dUtyyy7BEbY6Jdffime4OrqaiIitzZTeL9v3z5xzKlTp0QB2QMjtJ8/f94lr3fffZcYhiGpVCpqjat5Bb7CesvKyggAZWdnOwBjs9mchMtxnBNwwsl3NcZ+D0Jw0tTUJGr37OzsvKZX0HwB1MUEOG4Tjx9++AEMwyAkJARZWVkgIshkMtcxt1QKnueRm5sLpVIJAGhvb583PLbZbCAicBwHIoLNZoPNZsOaNWvE93/88QcYhoFcLgcATExMYGxsTAzLWZYFz/PzRp0SiQQMw2Bqagqjo6OwWCxgWRYSicRhbfZ5mDBmZmbGaS6pVAqWZeHt7Q2pVAovLy9xnLvQmGEYsCwLhmHAMIzIYz5yahUGDA4OgogQFRUFtVq9qIlXrFgBjUYDABgYGFgwYeU4zuGRSqUYGhoSAb3rrrtgNBqxe/duREVFwc/PDwEBAdBqtdi2bRt+/fVXETR3ucSHH36IdevWwc/PD4GBgQgMDERGRga++uorcT9//fUXUlJSkJGRgenpaXz22Wd44IEHoNFoEBsbi+eeew5dXV1gWRYtLS148MEH8fzzz8Nms6G/vx8xMTEIDw9HeXk5AKCwsBBJSUn4/vvvAQDl5eVISkpCdXU1JicnUVxcjJSUFKSnp2N6etrlAZYulCQtJZu3Z77QSfb394dUKnXQuuHhYVRUVIBhGERGRmL16tVIS0vDjz/+iNjYWOh0OrAsi2+++QY1NTX4+uuv0dHRgbVr1zrNJ5VKsW/fPpSWlsLLywsvv/wyQkNDcebMGdTV1aGpqQkffPAB8vLy8M8//6C9vR2enp7Iz89HdXU1YmJiEBISgkuXLqG3txf19fUwGAxQKBSwWq3gOE7ULj8/P3AcJ1oLg8GAs2fP4tq1awCA3t5e/PTTT4iKisLHH38MvV4PAFAqlSKfBRNMwWZv376dGIahFStW0NTU1LyOU7DPfX19pFQqiWEYKi0tdUoY7X3Mzp076a233iKdTkf79++nHTt2kEajEdubm5upsbGRAJBGoyGTyeRgs1NSUggA7dq1y8G/bdmyhYiIrl+/LvJqa2tzWO/evXuJZVlas2YNEREZDAaSSCSkUCgoICCAOjo6xL4Gg4FWrlxJAOixxx4T358+fZoA0MqVK53kkZaWRhKJhD755BMiIiopKSGJREJqtZqCgoKooqKC2traSK/Xi/5pLrnVmMTERFRVVWFgYACNjY3IysqC1Wp16WdsNhvkcjlqa2thsVgAAElJSfOav8rKSpfv77vvPuzduxcbNmxAV1cXjhw5glWrVsHLy8vBdCYlJaG9vR1jY2MO8wi/EokEFRUV8PDwwPr16x3m2LhxI0pLS2EymcS+gjmtqalBYmIibDYbAGDdunV49dVXkZ+fj56eHphMJnh6esJsNouWYWZmBnK5XDTHgpkWLIharQbHcZiZmUFrayvi4+OXXisTal1PPvkkAgICMD4+juLiYqSmpsLHxwdWq9XBvPE8D7lcjosXL+Kdd94By7JYtWoVHnnkERARWJZ1GQCUlJQgIiICHMdBJpPB29sb4eHhWLt2LeRyOXieR1xcHOLi4gAAly9fxsDAACYmJqBQKHD16lUQkYM5tAcmMDAQhYWFor/r7+/HyMgIWJZFX1+fSzPt7e2N1NRUcBwnrpvneURGRoKIYLVaxf3bHzjBqS9UF4uLi0N8fLyDDN3VFqWuHDnHcQgICEBJSQleeeUV9Pb24oknnsDnn3+OyMhIJyD1ej2ys7NhNBpBRNDpdOIJmhv9CLRt2zZERUW5LZoKm6ytrcWBAwfQ29u7pOIoy7Lo7u7G7t270dzcvCgfqVar4eHhIa557sEiomUVJYUxQUFBIs+Fir1SdyEmx3EoKCiAXq/H8ePHodfrkZCQgJycHKxfvx7+/v4YGhpCQ0MDjh8/jpmZGQDArl27kJWVtWCleXx8HDabDTzPO4Sbwn+WZVFbW4vc3FxIpVIUFRUhLS0NwcHBkMvlKC8vx9GjR+Hp6ekU7QHAlStXkJ6ejpGREWRmZiI3NxfR0dFQq9W4ePEinn76aSdtW+QNyLJpMVq1YFQmCLW2thYqlQpVVVUYGxtDZWWlW/9QXFyMgwcPLiqak0gkoj227yucKLPZjD179kAikeC7775DRkaGU1QnRF+ugCkrK8PIyAheeOEFVFVVOfQR/OBCp3Y50eitIrfSs1qt6OjogFQqxdGjR9HQ0IDU1FSoVCqHfr6+vti0aRMMBgMOHjyI6elpdHR0LPseQjAXfX19GBwchK+vLzZs2ICZmRlYLBbMzs4CAM6dO+dSuAJQP//8MxiGwcaNG8HzPEwmk+iwu7q6AEDMgW5GsCzLQiqVOjj72wKMEFcfO3YMycnJeOihh/DRRx8hPT0dLS0tuHr1KhobG3HixAm0traiv78fJ0+eRGxsLA4dOoSEhAQkJyejra3Ngd9S1VmpVIJlWRiNRpw8eRIKhQJKpVKM/lpbW8EwjMPlmD1fmUwGlmVRX18PlmWhUqng6emJ69evY//+/U5rWGhdc9sFTR8fH8fff/8tWgB3wcBSzJiTKRPMiMVigU6nAwB0dnais7MTOp0OW7duRV5eHh599FFxzOXLl1FSUoK6ujoMDw+L78vKypCcnOwgPMGhzndKhdJHdHQ00tLS0NTUhNzcXGzZsgVarRbnzp1DQ0MDEhIScPbsWVELhBKPYKZycnJQVFSEY8eOYWhoCImJiRgZGUFNTQ3uvvtuEBGMRqPD3oUQ2ZUWC+2CcENCQsDzPEZHR5GSkoLo6Ghs2rQJeXl5sFgsYlnJ/lrebTK5mARTKLJduHCBXnvtNQoPD3e4EPPy8qKcnBz69NNPKTMzk2QymUN7TEwMHThwgPr6+pyqy5cuXaLQ0FAKDQ2lCxcuuK28CgW/GzduUGZmJrEs6zDH+++/T99++y2pVCravn07EREdPnyYgoODKT8/Xyw87tmzh3x9fR3Gbt68mX7//Xfy8/OjyMhI4nmeuru7Sa1WU0xMjJjI2l8UNjc3k0qloujoaJqcnBTbi4qKyN/fX+T9xhtvEBFRVlYWBQcH0xdffEFERBUVFaRSqcTkdzHXAMxCH2NMTEygvr4eVVVVOH36tFtHnpKSgh07duCpp54SvwFwVR8TakMeHh7zBgj2oWlvby/6+/shkUiwevVqhIaGwmq1YnR0FAqFAn5+fpidncXs7CxkMhkUCoXI58aNG+jp6YHFYkFkZCTuvfdeAMDw8DCICEFBQeA4DqOjo5BIJAgICHAyObOzsxgfH3fZPjo6Kq4jODgYSqUSFosFNpsNCoUCMpkMZrMZRqMRSqUSvr6+N3fnb19SF6ilpYWys7NJrVYTAAoMDKQXX3yRDAaDU1lnKfceS7kPWcrFk6t+9pdat+KS7HbRghojZL/20U9fXx/0ej3S09MRFhbm0G9uVnwrvmQRbPTcXGcuL1e8hXUtZ+xi1m3vNwUH7473Uva9IDCuIjZ7kIQs/c43Zbc4GaVlBN88z4vacQeQ/yFg7tDtpzvH/X+U/gPga2qMhTBJ1wAAAABJRU5ErkJggg==" alt="Palantir" style="height:26px; vertical-align:middle;" /></div>
+        <p class="tab-subtitle">On-the-ground enablement plans, event strategy, training programs, and seller readiness across agency and direct channels.</p>
+      </div>
+      <div class="tab-nav-btns">
+        <button class="btn-nav" onclick="switchTab(4)">← GTM Assets</button>
+        <button class="btn-nav" onclick="switchTab(1)">↺ Start Over</button>
+      </div>
+    </div>
+
+
+    <style>
+      /* ── 90-DAY PHASE TIMELINE ── */
+      .phase-timeline {
+        display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
+        border-radius: 12px; overflow: hidden; margin-bottom: 24px;
+        border: 1.5px solid var(--border);
+      }
+      .phase-block {
+        padding: 16px 18px; position: relative;
+      }
+      .phase-block::after {
+        content: '▶';
+        position: absolute; right: -8px; top: 50%; transform: translateY(-50%);
+        font-size: 12px; color: #fff; z-index: 2;
+      }
+      .phase-block:last-child::after { display: none; }
+      .phase-num {
+        font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+        text-transform: uppercase; margin-bottom: 4px; opacity: 0.75;
+      }
+      .phase-name { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+      .phase-days { font-size: 11px; opacity: 0.65; margin-bottom: 8px; }
+      .phase-tasks-count {
+        font-size: 11px; font-weight: 600; padding: 2px 8px;
+        border-radius: 10px; display: inline-block;
+        background: rgba(255,255,255,0.25);
+      }
+      .ph1 { background: var(--navy); color: #fff; }
+      .ph2 { background: #1A45C4; color: #fff; }
+      .ph3 { background: var(--teal); color: #003D57; }
+      .ph4 { background: var(--yellow); color: #3D2C00; }
+      .ph4::after { color: var(--yellow); }
+
+      /* ── TACTIC TABLE ── */
+      .tactic-controls {
+        display: flex; align-items: center; gap: 8px;
+        margin-bottom: 14px; flex-wrap: wrap;
+      }
+      .cat-btn {
+        border: 1.5px solid var(--border); background: var(--surface);
+        border-radius: 20px; padding: 5px 13px; font-size: 11px;
+        font-weight: 600; color: var(--text-secondary); cursor: pointer;
+        font-family: 'DM Sans', sans-serif; transition: all 0.15s;
+        white-space: nowrap;
+      }
+      .cat-btn:hover, .cat-btn.active {
+        background: var(--navy); color: #fff; border-color: var(--navy);
+      }
+
+      .tactic-table { width: 100%; border-collapse: collapse; min-width: 900px; font-size: 12px; }
+      .tactic-table thead th {
+        background: var(--navy); color: #fff; padding: 9px 11px;
+        font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
+        text-transform: uppercase; text-align: left; white-space: nowrap;
+      }
+      .tactic-table thead th:first-child { border-radius: 8px 0 0 0; }
+      .tactic-table thead th:last-child  { border-radius: 0 8px 0 0; text-align: center; }
+      .tactic-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+      .tactic-table tbody tr:last-child { border-bottom: none; }
+      .tactic-table tbody tr:hover { background: #F7F9FF; }
+      .tactic-table td { padding: 8px 11px; vertical-align: middle; }
+
+      /* Category divider rows */
+      .cat-divider td {
+        background: var(--bg);
+        font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+        text-transform: uppercase; padding: 7px 12px;
+        border-top: 1.5px solid var(--border); border-bottom: none;
+      }
+      .cat-divider td span {
+        display: inline-block; width: 10px; height: 10px;
+        border-radius: 50%; margin-right: 7px; vertical-align: middle;
+      }
+
+      /* Category color dots */
+      .c-alliance  { color: #0077A3; }
+      .c-sponsor   { color: #6D28D9; }
+      .c-narrative { color: #B45309; }
+      .c-asset     { color: #15803D; }
+      .c-sales     { color: #B91C1C; }
+      .c-training  { color: #1A45C4; }
+      .c-marketing { color: #C2410C; }
+
+      .dot-alliance  { background: #0ABCD4; }
+      .dot-sponsor   { background: #7B5CF6; }
+      .dot-narrative { background: #F59E0B; }
+      .dot-asset     { background: #22C55E; }
+      .dot-sales     { background: #EF4444; }
+      .dot-training  { background: #3B82F6; }
+      .dot-marketing { background: #F97316; }
+
+      /* Phase pill */
+      .phase-pill {
+        font-size: 10px; font-weight: 700; padding: 2px 8px;
+        border-radius: 10px; white-space: nowrap; display: inline-block;
+      }
+      .pp1 { background: #EEF2FF; color: var(--navy); }
+      .pp2 { background: #E0ECFF; color: #1A45C4; }
+      .pp3 { background: #E0F7FC; color: #0077A3; }
+      .pp4 { background: #FFF9E0; color: #A16207; }
+
+      /* KPI cell */
+      .kpi-text { font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
+
+      /* Date input */
+      .date-input {
+        border: 1.5px solid var(--border); border-radius: 6px;
+        padding: 4px 7px; font-size: 11px; color: var(--text-primary);
+        background: var(--surface); font-family: 'DM Sans', sans-serif;
+        width: 118px; transition: border-color 0.15s;
+      }
+      .date-input:focus { outline: none; border-color: var(--teal); }
+
+      /* KPI value input */
+      .kpi-val-input {
+        border: 1.5px solid var(--border); border-radius: 6px;
+        padding: 4px 7px; font-size: 11px; color: var(--text-primary);
+        background: var(--surface); font-family: 'DM Sans', sans-serif;
+        width: 100px; transition: border-color 0.15s;
+      }
+      .kpi-val-input:focus { outline: none; border-color: var(--teal); }
+
+      /* Status cycle */
+      .tac-status {
+        border: none; border-radius: 6px; font-size: 10px; font-weight: 700;
+        padding: 4px 9px; cursor: pointer; transition: all 0.15s;
+        font-family: 'DM Sans', sans-serif; white-space: nowrap;
+        text-transform: uppercase; letter-spacing: 0.3px;
+      }
+      .ts-todo { background: #F1F5F9; color: #64748B; }
+      .ts-wip  { background: #FEF9C3; color: #92400E; }
+      .ts-done { background: #DCFCE7; color: #15803D; }
+      .ts-blk  { background: #FEE2E2; color: #991B1B; }
+
+      /* Summary strip */
+      .phase-summary {
+        display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 14px;
+      }
+      .ps-card {
+        border-radius: 10px; padding: 12px 14px;
+        border: 1.5px solid var(--border);
+        display: flex; flex-direction: column; gap: 4px;
+      }
+      .ps-phase { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+      .ps-nums { display: flex; align-items: baseline; gap: 4px; }
+      .ps-done  { font-size: 20px; font-weight: 700; color: #15803D; }
+      .ps-total { font-size: 12px; color: var(--text-muted); }
+      .ps-bar-wrap { background: var(--border); border-radius: 4px; height: 5px; overflow: hidden; margin-top: 4px; }
+      .ps-bar { height: 100%; border-radius: 4px; transition: width 0.3s; }
+
+      .overall-prog {
+        display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 16px;
+      }
+    </style>
+
+    <!-- PHASE TIMELINE HEADER -->
+    <div class="phase-timeline">
+      <div class="phase-block ph1">
+        <div class="phase-num">Phase 1</div>
+        <div class="phase-name">Foundation</div>
+        <div class="phase-days">Days 1 – 90</div>
+        <div class="phase-tasks-count" id="ph1_count">— tasks</div>
+      </div>
+      <div class="phase-block ph2">
+        <div class="phase-num">Phase 2</div>
+        <div class="phase-name">Build</div>
+        <div class="phase-days">Days 91 – 180</div>
+        <div class="phase-tasks-count" id="ph2_count">— tasks</div>
+      </div>
+      <div class="phase-block ph3">
+        <div class="phase-num">Phase 3</div>
+        <div class="phase-name">Scale</div>
+        <div class="phase-days">Days 181 – 270</div>
+        <div class="phase-tasks-count" id="ph3_count">— tasks</div>
+      </div>
+      <div class="phase-block ph4">
+        <div class="phase-num">Phase 4</div>
+        <div class="phase-name">Optimize</div>
+        <div class="phase-days">Days 271 – 360</div>
+        <div class="phase-tasks-count" id="ph4_count">— tasks</div>
+      </div>
+    </div>
+
+    <!-- OVERALL PROGRESS -->
+    <div class="overall-prog">
+      <div class="metric-card">
+        <div class="metric-value" id="ov_total">37</div>
+        <div class="metric-label">Total Tactics</div>
+        <div class="metric-delta delta-tbd">Across 7 categories</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ov_done" style="color:#15803D;">0</div>
+        <div class="metric-label">Complete</div>
+        <div class="metric-delta delta-up" id="ov_done_pct">0% of all tactics</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ov_wip" style="color:#92400E;">0</div>
+        <div class="metric-label">In Progress</div>
+        <div class="metric-delta delta-tbd" id="ov_wip_pct">0% of all tactics</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value" id="ov_blk" style="color:#991B1B;">0</div>
+        <div class="metric-label">Blocked</div>
+        <div class="metric-delta delta-tbd">Needs attention</div>
+      </div>
+    </div>
+
+    <!-- FILTER + TABLE -->
+    <div class="content-card">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:14px; gap:12px; flex-wrap:wrap;">
+        <div>
+          <div class="card-label">Partnership Maturity Tracker</div>
+          <div class="card-title" style="margin-bottom:4px;">Tactics, KPIs &amp; Completion Dates</div>
+          <div class="card-desc">Click <strong>Status</strong> to cycle through states. Enter target and completion dates directly in each row.</div>
+        </div>
+      </div>
+
+      <div class="tactic-controls">
+        <button class="cat-btn active" onclick="filterTactics('all',this)">All</button>
+        <button class="cat-btn" onclick="filterTactics('alliance',this)">Alliance Setup</button>
+        <button class="cat-btn" onclick="filterTactics('sponsor',this)">Key Sponsorship</button>
+        <button class="cat-btn" onclick="filterTactics('narrative',this)">Solution Narrative</button>
+        <button class="cat-btn" onclick="filterTactics('asset',this)">Asset Development</button>
+        <button class="cat-btn" onclick="filterTactics('sales',this)">Sales Enablement</button>
+        <button class="cat-btn" onclick="filterTactics('training',this)">Training &amp; Dev</button>
+        <button class="cat-btn" onclick="filterTactics('marketing',this)">Demand Gen</button>
+        <button class="cat-btn" style="margin-left:auto;" onclick="filterTactics('wip',this)">🟡 In Progress</button>
+        <button class="cat-btn" onclick="filterTactics('blk',this)">🔴 Blocked</button>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="tactic-table">
+          <thead>
+            <tr>
+              <th style="width:140px;">Category</th>
+              <th style="width:220px;">Tactic</th>
+              <th style="width:180px;">KPI / Success Metric</th>
+              <th style="width:70px;">Phase</th>
+              <th style="width:120px;">Target Date</th>
+              <th style="width:120px;">Date Completed</th>
+              <th style="width:110px;">Actual KPI</th>
+              <th style="width:90px; text-align:center;">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tacticTbody"></tbody>
+        </table>
+      </div>
+
+      <!-- PER-PHASE PROGRESS -->
+      <div class="phase-summary" id="phaseSummary" style="margin-top:16px;">
+        <div class="ps-card">
+          <div class="ps-phase" style="color:var(--navy);">Phase 1 · Foundation</div>
+          <div class="ps-nums"><span class="ps-done" id="ph1_done">0</span><span class="ps-total" id="ph1_tot">/ —</span></div>
+          <div class="ps-bar-wrap"><div class="ps-bar" id="ph1_bar" style="background:var(--navy); width:0%;"></div></div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-phase" style="color:#1A45C4;">Phase 2 · Build</div>
+          <div class="ps-nums"><span class="ps-done" id="ph2_done">0</span><span class="ps-total" id="ph2_tot">/ —</span></div>
+          <div class="ps-bar-wrap"><div class="ps-bar" id="ph2_bar" style="background:#1A45C4; width:0%;"></div></div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-phase" style="color:#0077A3;">Phase 3 · Scale</div>
+          <div class="ps-nums"><span class="ps-done" id="ph3_done">0</span><span class="ps-total" id="ph3_tot">/ —</span></div>
+          <div class="ps-bar-wrap"><div class="ps-bar" id="ph3_bar" style="background:var(--teal); width:0%;"></div></div>
+        </div>
+        <div class="ps-card">
+          <div class="ps-phase" style="color:#A16207;">Phase 4 · Optimize</div>
+          <div class="ps-nums"><span class="ps-done" id="ph4_done">0</span><span class="ps-total" id="ph4_tot">/ —</span></div>
+          <div class="ps-bar-wrap"><div class="ps-bar" id="ph4_bar" style="background:var(--yellow); width:0%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      var tactics = [
+        /* ── ALLIANCE SETUP (7) ── */
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Execute MNDA / NDA', kpi:'NDA signed by both parties', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Finalize Partner Agreement', kpi:'Contract signed', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Partner Assist / Co-Sell / Better Together Framework', kpi:'Rules of Engagement defined', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Rules of Engagement Published', kpi:'# Stage 1 opportunities created', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Agree on Initial Scope of Relationship', kpi:'Document published and shared', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Identify Executive Sponsors', kpi:'Sponsor named on each side', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'alliance', catLabel:'Alliance Setup & Operations', phase:1, tactic:'Business Plan V1 Assembled', kpi:'Document published and shared', status:'todo', target:'', completed:'', actual:'' },
+        /* ── KEY SPONSORSHIP (3) ── */
+        { cat:'sponsor', catLabel:'Establish Key Sponsorship', phase:1, tactic:'Assign Executive Relationships', kpi:'Call frequency established per quarter', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sponsor', catLabel:'Establish Key Sponsorship', phase:2, tactic:'Identify Priority Agencies', kpi:'# of deals by market / agency', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sponsor', catLabel:'Establish Key Sponsorship', phase:2, tactic:'Introductions Between Teams', kpi:'# of people trained / introduced', status:'todo', target:'', completed:'', actual:'' },
+        /* ── SOLUTION NARRATIVE (4) ── */
+        { cat:'narrative', catLabel:'Solution Narrative Development', phase:1, tactic:'Education Content: Partnering Rules & Guidelines', kpi:'Core team agreement documented', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'narrative', catLabel:'Solution Narrative Development', phase:2, tactic:'Mutual Value Proposition', kpi:'Document published and shared', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'narrative', catLabel:'Solution Narrative Development', phase:2, tactic:'Solution Area Expertise Defined', kpi:'Document published and shared', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'narrative', catLabel:'Solution Narrative Development', phase:2, tactic:'Introductions to Possible Buyers', kpi:'# buyer meetings scheduled', status:'todo', target:'', completed:'', actual:'' },
+        /* ── ASSET DEVELOPMENT (4) ── */
+        { cat:'asset', catLabel:'Asset Development', phase:2, tactic:'Solution Narrative Assets', kpi:'# Stage 3–5 opportunities influenced', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'asset', catLabel:'Asset Development', phase:2, tactic:'Sales Assets (Videos, Decks, Stories, Microsites)', kpi:'# Stage 3–5 opportunities influenced', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'asset', catLabel:'Asset Development', phase:2, tactic:'Internal Education Assets', kpi:'# markets / capabilities trained', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'asset', catLabel:'Asset Development', phase:2, tactic:'Solution Demos by Industry', kpi:'POV / assets complete and published', status:'todo', target:'', completed:'', actual:'' },
+        /* ── SALES ENABLEMENT (5) ── */
+        { cat:'sales', catLabel:'Sales Enablement', phase:2, tactic:'Presentations to Partner Teams', kpi:'# heads trained; opps per month', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sales', catLabel:'Sales Enablement', phase:3, tactic:'Partner Teams Present to Agency Teams', kpi:'# heads trained; opps per month', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sales', catLabel:'Sales Enablement', phase:2, tactic:'Customer / Prospect Overlap Mapping', kpi:'Venn diagram published and activated', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sales', catLabel:'Sales Enablement', phase:3, tactic:'Build Dashboards, Reports & Cadence', kpi:'Dashboard live; tracking pipeline & win rate', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'sales', catLabel:'Sales Enablement', phase:3, tactic:'Scoping & Bid Development Guide', kpi:'# Stage 3–5 opportunities using guide', status:'todo', target:'', completed:'', actual:'' },
+        /* ── TRAINING & DEVELOPMENT (6) ── */
+        { cat:'training', catLabel:'Training & Development', phase:1, tactic:'Platform / Product Access for Core Teams', kpi:'Access granted to all key team members', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'training', catLabel:'Training & Development', phase:2, tactic:'Admin Certifications', kpi:'Target defined; training started', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'training', catLabel:'Training & Development', phase:2, tactic:'Technical Enablement Program', kpi:'# certifications earned', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'training', catLabel:'Training & Development', phase:3, tactic:'Technical Certifications', kpi:'Target defined; training completed', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'training', catLabel:'Training & Development', phase:3, tactic:'Delivery Management & Risk Gates', kpi:'# certifications; delivery framework adopted', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'training', catLabel:'Training & Development', phase:3, tactic:'Project Experience & Lessons Learned', kpi:'# projects documented; hours billed; customer stories', status:'todo', target:'', completed:'', actual:'' },
+        /* ── MARKETING DEMAND GEN (8) ── */
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:2, tactic:'Partner Logo on Websites', kpi:'Opportunities per month', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:2, tactic:'Acquisition / Partnering Announcement', kpi:'# Stage 1 opportunities created', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:2, tactic:'Landing Page Live', kpi:'# Stage 1 opportunities created', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:2, tactic:'Demand Gen Deal Alerts', kpi:'# signals per month', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:3, tactic:'Campaign Development', kpi:'# Stage 1 opportunities created', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:3, tactic:'Events Program', kpi:'# Stage 1 opportunities from events', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:3, tactic:'Co-Branded Content Series', kpi:'# impressions; # qualified leads', status:'todo', target:'', completed:'', actual:'' },
+        { cat:'marketing', catLabel:'Marketing & Demand Generation', phase:4, tactic:'Full Campaign Optimization', kpi:'Pipeline contribution; cost per opp', status:'todo', target:'', completed:'', actual:'' },
+      ];
+
+      var catMeta = {
+        alliance:  { dot:'dot-alliance',  label:'Alliance Setup' },
+        sponsor:   { dot:'dot-sponsor',   label:'Key Sponsorship' },
+        narrative: { dot:'dot-narrative', label:'Solution Narrative' },
+        asset:     { dot:'dot-asset',     label:'Asset Development' },
+        sales:     { dot:'dot-sales',     label:'Sales Enablement' },
+        training:  { dot:'dot-training',  label:'Training & Dev' },
+        marketing: { dot:'dot-marketing', label:'Demand Gen' },
+      };
+
+      var phaseClass  = ['','pp1','pp2','pp3','pp4'];
+      var phaseLabel  = ['','Phase 1','Phase 2','Phase 3','Phase 4'];
+      var statusCycle = { todo:'wip', wip:'done', done:'blk', blk:'todo' };
+      var statusClass = { todo:'ts-todo', wip:'ts-wip', done:'ts-done', blk:'ts-blk' };
+      var statusLabel = { todo:'To Do', wip:'In Progress', done:'Complete', blk:'Blocked' };
+
+      var currentFilter = 'all';
+
+      function visible(i) {
+        var t = tactics[i];
+        if (currentFilter === 'all')  return true;
+        if (currentFilter === 'wip')  return t.status === 'wip';
+        if (currentFilter === 'blk')  return t.status === 'blk';
+        return t.cat === currentFilter;
+      }
+
+      function renderTable() {
+        var tbody = document.getElementById('tacticTbody');
+        var lastCat = '';
+        var html = '';
+        tactics.forEach(function(t, i) {
+          if (t.cat !== lastCat) {
+            var m = catMeta[t.cat];
+            html += '<tr class="cat-divider" data-cat="'+t.cat+'" style="display:'+(currentFilter==='all'||currentFilter===t.cat||currentFilter==='wip'||currentFilter==='blk'?'':'none')+'">'
+                  + '<td colspan="8"><span class="'+m.dot+'"></span>'+t.catLabel+'</td>'
+                  + '</tr>';
+            lastCat = t.cat;
+          }
+          var m = catMeta[t.cat];
+          html += '<tr id="tr_'+i+'" data-cat="'+t.cat+'" data-status="'+t.status+'" style="display:'+(visible(i)?'':'none')+'">';
+          html += '<td><span style="display:inline-flex;align-items:center;gap:6px;">'
+                + '<span class="'+m.dot+'" style="width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block;"></span>'
+                + '<span style="font-size:11px;font-weight:600;color:var(--text-secondary);">'+m.label+'</span></span></td>';
+          html += '<td style="font-size:12px;font-weight:500;color:var(--text-primary);line-height:1.4;">'+t.tactic+'</td>';
+          html += '<td class="kpi-text">'+t.kpi+'</td>';
+          html += '<td><span class="phase-pill '+phaseClass[t.phase]+'">'+phaseLabel[t.phase]+'</span></td>';
+          html += '<td><input type="date" class="date-input" id="tgt_'+i+'" value="'+t.target+'" onchange="updateField('+i+',\'target\',this.value)"></td>';
+          html += '<td><input type="date" class="date-input" id="cmp_'+i+'" value="'+t.completed+'" onchange="updateField('+i+',\'completed\',this.value)"></td>';
+          html += '<td><input type="text" class="kpi-val-input" id="act_'+i+'" value="'+t.actual+'" placeholder="Enter value…" onchange="updateField('+i+',\'actual\',this.value)"></td>';
+          html += '<td style="text-align:center;"><button class="tac-status '+statusClass[t.status]+'" id="st_'+i+'" onclick="cycleStatus('+i+')">'+statusLabel[t.status]+'</button></td>';
+          html += '</tr>';
+        });
+        tbody.innerHTML = html;
+        updateSummary();
+      }
+
+      window.updateField = function(i, field, val) {
+        tactics[i][field] = val;
+      };
+
+      window.cycleStatus = function(i) {
+        tactics[i].status = statusCycle[tactics[i].status];
+        var btn = document.getElementById('st_'+i);
+        var row = document.getElementById('tr_'+i);
+        btn.className = 'tac-status ' + statusClass[tactics[i].status];
+        btn.textContent = statusLabel[tactics[i].status];
+        row.dataset.status = tactics[i].status;
+        if (!visible(i)) row.style.display = 'none';
+        updateSummary();
+      };
+
+      window.filterTactics = function(f, btn) {
+        currentFilter = f;
+        document.querySelectorAll('.cat-btn').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        tactics.forEach(function(t, i) {
+          var row = document.getElementById('tr_'+i);
+          if (row) row.style.display = visible(i) ? '' : 'none';
+        });
+        /* show/hide category dividers */
+        document.querySelectorAll('.cat-divider').forEach(function(d) {
+          var c = d.dataset.cat;
+          var hasVisible = tactics.some(function(t,i){ return t.cat===c && visible(i); });
+          d.style.display = hasVisible ? '' : 'none';
+        });
+        updateSummary();
+      };
+
+      function updateSummary() {
+        var total=tactics.length, done=0, wip=0, blk=0;
+        var phaseTot=[0,0,0,0,0], phaseDone=[0,0,0,0,0];
+        tactics.forEach(function(t) {
+          if (t.status==='done') done++;
+          else if (t.status==='wip') wip++;
+          else if (t.status==='blk') blk++;
+          phaseTot[t.phase]++;
+          if (t.status==='done') phaseDone[t.phase]++;
+        });
+
+        /* overall */
+        document.getElementById('ov_total').textContent = total;
+        document.getElementById('ov_done').textContent  = done;
+        document.getElementById('ov_wip').textContent   = wip;
+        document.getElementById('ov_blk').textContent   = blk;
+        document.getElementById('ov_done_pct').textContent = Math.round(done/total*100)+'% of all tactics';
+        document.getElementById('ov_wip_pct').textContent  = Math.round(wip/total*100)+'% of all tactics';
+
+        /* phase counts in timeline header */
+        for (var p=1; p<=4; p++) {
+          var el = document.getElementById('ph'+p+'_count');
+          if (el) el.textContent = phaseTot[p]+' tasks';
+        }
+
+        /* phase progress bars */
+        for (var p=1; p<=4; p++) {
+          var pct = phaseTot[p] > 0 ? Math.round(phaseDone[p]/phaseTot[p]*100) : 0;
+          var dEl = document.getElementById('ph'+p+'_done');
+          var tEl = document.getElementById('ph'+p+'_tot');
+          var bEl = document.getElementById('ph'+p+'_bar');
+          if (dEl) dEl.textContent = phaseDone[p];
+          if (tEl) tEl.textContent = '/ '+phaseTot[p]+' complete';
+          if (bEl) bEl.style.width = pct+'%';
+        }
+      }
+
+      renderTable();
+    })();
+    </script>
+  </div>
+
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">© 2026 The Marketing Cloud · A Stagwell Company</span>
+  <span class="footer-conf">Confidential · CEO Executive Briefing</span>
+</footer>
+
+<script>
+  function switchTab(n) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.toc-card').forEach(c => c.classList.remove('active'));
+    document.getElementById('tab-' + n).classList.add('active');
+    document.querySelectorAll('.toc-card')[n - 1].classList.add('active');
+    document.querySelector('.main-content').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
