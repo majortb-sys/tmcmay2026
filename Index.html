@@ -1619,6 +1619,7 @@
         </div>
         <h2 class="tab-h2">Stagwell Activation<br>Across Agencies</h2>
         <p class="tab-subtitle">Coordinated rollout strategy across the Stagwell agency network — enabling internal adoption, cross-sell, and co-selling motions.</p>
+        <button class="btn-nav primary" onclick="document.getElementById('agency-roster-section').scrollIntoView({behavior:'smooth'})" style="margin-top:12px;">View Agency Roster ↓</button>
       </div>
       <div class="tab-nav-btns">
         <button class="btn-nav" onclick="switchTab(2)">← Business Plan</button>
@@ -2033,6 +2034,194 @@
       renderTable();
     })();
     </script>
+
+    <!-- AGENCY ROSTER SECTION -->
+    <div id="agency-roster-section" class="content-card" style="margin-top:24px;">
+      <div class="card-label">Agency Directory</div>
+      <div class="card-title" style="margin-bottom:4px;">Agency Roster</div>
+      <div class="card-desc" style="margin-bottom:18px;">Comprehensive overview of Stagwell agencies — capabilities, leadership, technologies, and collaboration overlaps across the network.</div>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; min-width:900px; font-family:'DM Sans',Arial,sans-serif; font-size:13px;">
+          <thead>
+            <tr>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left; border-radius:8px 0 0 0;">Agency</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left;">HQ &amp; Key Locations</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:center;">Approx. Employees</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left;">Top Executives</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left;">Focus Areas</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left;">Notable Overlaps</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left;">Target Industries</th>
+              <th style="background:var(--navy); color:#fff; padding:12px 14px; font-size:11px; font-weight:600; letter-spacing:0.4px; text-transform:uppercase; text-align:left; border-radius:0 8px 0 0;">Key Technologies/Tools</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border); background:var(--teal-light);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--navy);">The Marketing Cloud</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">New York (Stagwell platform)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Platform (not traditional headcount)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Stagwell Tech Leadership (e.g. Merrill Raman)</td>
+              <td style="padding:10px 14px;"><span class="tag-blue" style="font-size:11px; padding:2px 8px; border-radius:10px;">AI-powered marketing SaaS platform</span></td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Powers tools across ALL Stagwell agencies</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Marketers &amp; agencies</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">AI Agents, LLMs, Harris Poll data, dashboards</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">72andSunny</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Los Angeles (HQ)<br>NY, Amsterdam, Sydney, Singapore, Toronto</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">500-700</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Evin Shutt, Justine Armour (CCO)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative advertising, brand building, cultural impact</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Assembly (media), Code and Theory (tech), GALE</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Consumer brands (beverage, auto, etc.)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative tech, experience design</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Anomaly</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">New York (HQ)<br>LA, London, Paris</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">500-600+</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Karina Wilsher (Global CEO), Carl Johnson, Mike Byrne</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative, brand transformation, experience</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative network, media/PR arms</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">B2C brands (Grubhub, Marriott, etc.)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Data-driven creativity, experience tech</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Code and Theory</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">New York (HQ)<br>Manila, Bengaluru + global</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">500-1,000+</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Dan Gardner (Chairman), Michael Treff (CEO)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Digital transformation, experience design, tech implementation</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Left Field Labs, Instrument, full Stagwell network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Enterprise, auto, finance, government</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">50% engineers, AI/Adobe, platforms, UX/UI</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">GALE</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">New York (HQ)<br>Playa Vista (CA)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">~750</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Andrew Noel (Global CEO)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Data-centric creative, media consultancy, CRM/loyalty</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Assembly (media), Code and Theory (tech)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">B2C/B2B (Chipotle, Delta, etc.)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Salesforce, analytics, AI targeting, CRM</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Assembly</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">New York (HQ)<br>25-35+ global offices</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">2,300-3,000+</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Rick Acampora (Global CEO)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Omnichannel media, performance, data planning</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Central media hub for all creative agencies</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Performance brands, political</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">STAGE OS, programmatic, connected TV</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Forsman &amp; Bodenfors</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Gothenburg/Stockholm (HQ)<br>NY, London, Singapore</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">~350</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Justine Armour (Global CCO)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative excellence, fame-building, cultural ideas</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">72andSunny, creative network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Iconic consumer brands</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Idea-driven creativity</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Doner / DonerColle</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Detroit area (US network)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Hundreds</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Doner Partner Network leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Full-service creative &amp; integrated campaigns</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Doner Partner Network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Automotive, consumer</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Traditional + digital creative</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Allison+Partners</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">San Francisco / Global</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Mid-sized</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Allison Worldwide leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Public relations, corporate communications</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">SKDK, Hunter (comms network)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Corporate, consumer</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">PR strategy, earned media</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">SKDK</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Washington DC / New York</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Part of ~1,200 comms segment</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">SKDK leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Strategic comms, advocacy, political, PR</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Allison, comms network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Corporations, political/advocacy</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Advocacy strategy, digital comms</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">NRG (National Research Group)</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">US-focused</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Research segment</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">NRG leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Market research, audience insights</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Feeds The Marketing Cloud + all agencies</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Entertainment, brands</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Attitudinal/behavioral data platforms</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Colle McVoy</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Minneapolis</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Mid-sized</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Constellation leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Integrated creative, branding</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Creative network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Consumer, B2B</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Full-service creative</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Left Field Labs</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Part of Code and Theory</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Boutique</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Code and Theory leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Immersive experiences, innovation</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Strong with Code and Theory</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Enterprise, experiential</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">AR/VR, interactive tech</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Hunter</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">US</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Mid-sized</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Hunter leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Public relations, influencer</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Comms/creative overlaps</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Consumer, lifestyle</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Earned media, influencer relations</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">Locaria</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">London / Warsaw</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Mid-sized</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Locaria leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Multilingual content, localization</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Assembly/GALE media</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Global brands</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Omnichannel content, translation tech</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 14px; font-weight:700; color:var(--text-primary);">YML</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Stagwell network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary); text-align:center;">Boutique-mid</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">YML leadership</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Digital experiences, transformation</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Code and Theory network</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">Tech/enterprise</td>
+              <td style="padding:10px 14px; color:var(--text-secondary);">UX, digital products</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:11px; color:var(--text-muted); margin-top:14px;"><strong>Note:</strong> Employee counts and leadership are approximate (2025-2026 data). Stagwell agencies are highly integrated — creative, media, tech, and comms teams frequently collaborate.</p>
+    </div>
+
   </div>
 
   <!-- TAB 4: GTM ASSETS & IP -->
